@@ -3,7 +3,7 @@ import React from "react"
 import { AiFillCodeSandboxCircle } from "react-icons/ai"
 
 const ServiceCard: React.FC = () => {
-  const element = CONFIG.projects.map((href, name) => {
+  const element = CONFIG.projects.map(({ href, name }) => {
     return (
       <>
         <a
@@ -21,7 +21,7 @@ const ServiceCard: React.FC = () => {
   return (
     element.length > 0 ?
       <>
-        <div className="p-1 mb-3 dark:text-white">🌟 Service</div>
+        <div className="p-1 mb-3 dark:text-white">🌟 Projetos</div>
         <ul className="rounded-2xl mb-9 bg-white dark:bg-zinc-700 p-1 flex flex-col">
           {element}
         </ul>
