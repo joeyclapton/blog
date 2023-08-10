@@ -11,10 +11,18 @@ const CONFIG = {
     instagram: "",
   },
   projects: [
-    // {
-    //   name: `morethan-log`,
-    //   href: "https://github.com/joeyclapton/blog",
-    // },
+    {
+      name: `Bookmark Generator`,
+      href: "https://github.com/joeyclapton/bookmarks-generator",
+    },
+    {
+      name: `PiP Chrome Extension`,
+      href: "https://github.com/joeyclapton/pip-video",
+    },
+    {
+      name: `Web Scraping and PDF Generator`,
+      href: "https://github.com/joeyclapton/pdf-generator-library-search",
+    },
   ],
   // blog setting (required)
   blog: {
