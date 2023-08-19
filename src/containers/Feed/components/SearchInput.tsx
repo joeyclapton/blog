@@ -5,13 +5,16 @@ interface Props extends InputHTMLAttributes<HTMLInputElement> {}
 const SearchInput: React.FC<Props> = ({ ...props }) => {
   return (
     <div className="mb-4 md:mb-8">
-      <div className="p-1 mb-3 dark:text-white">🔎 Pesquisar</div>
-      <input
-        className="rounded-2xl px-5 py-2 w-full bg-gray-200 dark:bg-zinc-700 dark:text-white focus:bg-white focus:shadow-md outline-none transition"
-        type="text"
-        placeholder="Pesquisar..."
-        {...props}
-      />
+      <label htmlFor="SearchPost" className="p-1 dark:text-white">🔎 Pesquisar</label>
+      <div>
+        <input
+          id="SearchPost"
+          className="rounded-2xl px-5 py-2 w-full dark:bg-zinc-700 dark:text-white focus:bg-white  outline-none transition mt-3"
+          type="text"
+          placeholder="Pesquise por um post..."
+          {...props}
+        />
+      </div>
     </div>
   )
 }
