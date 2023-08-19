@@ -3,7 +3,7 @@ const CONFIG = {
   profile: {
     name: "Joey Clapton",
     image: "/avatar.webp", // If you want to create your own notion avatar, check out https://notion-avatar.vercel.app
-    role: "Front-end developer",
+    role: "Front-End Developer",
     bio: "",
     email: "joeyclapton42@gmail.com",
     linkedin: "joeyclapton",
@@ -37,7 +37,7 @@ const CONFIG = {
   lang: "en-US", // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP', 'es-ES', 'ko-KR']
   ogImageGenerateURL: "https://og-image-korean.vercel.app", // The link to generate OG image, don't end with a slash
   seo: {
-    keywords: ["Blog", "Website", "Notion"],
+    keywords: ["Blog", "Website", "Notion", "Software Engineer", "Front End", "Tech", "Philosophy"],
   },
 
   // notion configuration (required)
