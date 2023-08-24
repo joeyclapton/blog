@@ -29,7 +29,7 @@ const Feed: React.FC<Props> = ({ categories, tags, posts }) => {
       <div
         className="common-no-scroll-bar sticky top-[73px] hidden lg:block col-span-2 overflow-scroll"
         style={{
-          height: "calc(100vh - 73px)",
+          height: "calc(100vh)",
         }}
       >
         {/* <Lists.CategoryList data={categories} /> */}
@@ -46,7 +46,7 @@ const Feed: React.FC<Props> = ({ categories, tags, posts }) => {
       <div
         className="common-no-scroll-bar sticky top-[73px] hidden lg:block lg:col-span-3 overflow-scroll"
         style={{
-          height: "calc(100vh - 73px)",
+          height: "calc(100vh)",
         }}
       >
         <Cards.ProfileCard />
