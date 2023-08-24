@@ -9,7 +9,7 @@ const SearchInput: React.FC<Props> = ({ ...props }) => {
       <div>
         <input
           id="SearchPost"
-          className="rounded-2xl px-5 py-2 w-full dark:bg-zinc-700 dark:text-white focus:bg-white  outline-none transition mt-3"
+          className="rounded-2xl px-5 py-2 w-full dark:bg-zinc-700 dark:text-white focus:bg-white focus:shadow-xl outline-none transition mt-3"
           type="text"
           placeholder="Pesquise por um post..."
           {...props}
