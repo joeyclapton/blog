@@ -22,7 +22,7 @@ const ServiceCard: React.FC = () => {
     element.length > 0 ?
       <>
         <div className="p-1 mb-3 dark:text-white">🌟 Projetos</div>
-        <ul className="rounded-2xl mb-9 bg-white dark:bg-zinc-700 p-1 flex flex-col">
+        <ul className="rounded-2xl mb-9 bg-white dark:bg-slate-900	 p-1 flex flex-col">
           {element}
         </ul>
       </>

@@ -9,7 +9,7 @@ type Props = {
 const MobileProfileCard: React.FC<Props> = () => {
   return (
     <div className="block lg:hidden">
-      <div className="p-2 rounded-2xl bg-white dark:bg-zinc-700 mb-4">
+      <div className="p-2 rounded-2xl bg-white dark:bg-slate-900	 mb-4">
         <div className="flex items-center gap-2">
           <Image
             src={CONFIG.profile.image}
