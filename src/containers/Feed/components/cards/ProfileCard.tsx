@@ -9,7 +9,7 @@ type Props = {
 const ProfileCard: React.FC<Props> = ({ className }) => {
   return (
     <div className={className}>
-      <div className="rounded-2xl bg-white dark:bg-slate-900	 w-full md:p-4 lg:p-4 mb-9 ">
+      <div className="rounded-md bg-white dark:bg-slate-900	 w-full md:p-4 lg:p-4 mb-9 ">
         <div className="relative w-full after:content-[''] after:block after:pb-[100%] max-w-[50%] m-auto ">
           <Image src={CONFIG.profile.image} layout="fill" alt="" />
         </div>

@@ -18,7 +18,7 @@ const PostCard: React.FC<Props> = ({ data }) => {
       <a>
         <article
           key={data.id}
-          className="relative overflow-hidden mb-6 md:mb-8 rounded-2xl bg-white dark:bg-slate-900	 hover:shadow-lg transition-shadow "
+          className="relative overflow-hidden mb-6 md:mb-8 rounded-md bg-white dark:bg-slate-900	 hover:shadow-lg transition-shadow "
         >
           {category && (
             <Category className="absolute top-4 left-4 z-10">
