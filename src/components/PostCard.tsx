@@ -57,14 +57,14 @@ const PostCard: React.FC<Props> = ({ data }) => {
                       width={20}
                       height={20}
                     />
-                    <div className="text-sm text-gray-500 dark:text-gray-400">
+                    <div className="text-sm text-gray-900 dark:text-gray-400">
                       {`${data.author[0].last_name}${data.author[0].first_name}`}
                     </div>
                   </div>
                   <div className="self-stretch w-px my-1 bg-gray-300"></div>
                 </>
               )} */}
-              <div className="text-sm text-gray-500 dark:text-gray-400 md:ml-0">
+              <div className="text-sm text-gray-900 dark:text-gray-400 md:ml-0">
                 {formatDate(
                   data?.date?.start_date || data.createdTime,
                   CONFIG.lang

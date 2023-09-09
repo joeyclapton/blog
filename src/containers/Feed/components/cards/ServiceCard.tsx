@@ -10,7 +10,7 @@ const ServiceCard: React.FC = () => {
           href={`${href}`}
           rel="noreferrer"
           target="_blank"
-          className="p-3 hover:bg-gray-100 dark:hover:bg-zinc-700 rounded-md cursor-pointer flex items-center gap-3 text-gray-500 dark:text-white hover:text-black dark:hover:text-white"
+          className="p-3 hover:bg-gray-100 dark:hover:bg-zinc-700 rounded-md cursor-pointer flex items-center gap-3 text-gray-900 dark:text-white hover:text-black dark:hover:text-white"
         >
           <AiFillCodeSandboxCircle className="text-2xl" />
           <div className="text-sm">{name}</div>

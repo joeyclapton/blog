@@ -16,7 +16,7 @@ const CustomError: React.FC<Props> = ({ errorType }) => {
           <Image src="/images/error.png" width={60} height={60} alt="error" />
           <div>4</div>
         </div>
-        <div className="text-3xl text-gray-500">Post not found</div>
+        <div className="text-3xl text-gray-900">Post not found</div>
       </div>
     </div>
   )

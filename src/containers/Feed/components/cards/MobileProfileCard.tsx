@@ -22,7 +22,7 @@ const MobileProfileCard: React.FC<Props> = () => {
             <div className=" text-xl  italic font-bold">
               {CONFIG.profile.name}
             </div>
-            <div className="text-sm text-gray-500 mb-2 dark:text-gray-400">
+            <div className="text-sm text-gray-900 mb-2 dark:text-gray-400">
               {CONFIG.profile.role}
             </div>
             <div className="text-sm">{CONFIG.profile.bio}</div>
@@ -34,7 +34,7 @@ const MobileProfileCard: React.FC<Props> = () => {
               href={`https://github.com/${CONFIG.profile.github}`}
               rel="noreferrer"
               target="_blank"
-              className="p-3 dark:hover:bg-zinc-700 rounded-md cursor-pointer text-gray-500 dark:text-white "
+              className="p-3 dark:hover:bg-zinc-700 rounded-md cursor-pointer text-gray-900 dark:text-white "
             >
               <AiOutlineGithub className="text-2xl" />
             </a>
@@ -44,7 +44,7 @@ const MobileProfileCard: React.FC<Props> = () => {
               href={`https://www.instagram.com/${CONFIG.profile.instagram}`}
               rel="noreferrer"
               target="_blank"
-              className="p-3 dark:hover:bg-zinc-700 rounded-md cursor-pointer text-gray-500 dark:text-white"
+              className="p-3 dark:hover:bg-zinc-700 rounded-md cursor-pointer text-gray-900 dark:text-white"
             >
               <AiOutlineInstagram className="text-2xl" />
             </a>
@@ -54,7 +54,7 @@ const MobileProfileCard: React.FC<Props> = () => {
               href={`mailto:${CONFIG.profile.email}`}
               rel="noreferrer"
               target="_blank"
-              className="  overflow-hidden p-3 dark:hover:bg-zinc-700 rounded-md cursor-pointer text-gray-500 dark:text-white"
+              className="  overflow-hidden p-3 dark:hover:bg-zinc-700 rounded-md cursor-pointer text-gray-900 dark:text-white"
             >
               <AiOutlineMail className="text-2xl flex-shrink-0" />
             </a>
@@ -64,7 +64,7 @@ const MobileProfileCard: React.FC<Props> = () => {
               href={`https://www.linkedin.com/in/${CONFIG.profile.linkedin}`}
               rel="noreferrer"
               target="_blank"
-              className="  overflow-hidden p-3 dark:hover:bg-zinc-700 rounded-md cursor-pointer text-gray-500 dark:text-white"
+              className="  overflow-hidden p-3 dark:hover:bg-zinc-700 rounded-md cursor-pointer text-gray-900 dark:text-white"
             >
               <AiFillLinkedin className="text-2xl flex-shrink-0" />
             </a>

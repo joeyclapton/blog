@@ -6,7 +6,7 @@ type Props = {}
 const Footer: React.FC<Props> = () => {
   const router = useRouter()
   return (
-    <div className="flex justify-between font-medium text-gray-500 dark:text-gray-400">
+    <div className="flex justify-between font-medium text-gray-900 dark:text-gray-400">
       <a>
         <button
           onClick={() => router.push('/')}
