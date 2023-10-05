@@ -27,7 +27,7 @@ const CONFIG = {
   // blog setting (required)
   blog: {
     title: "Joey Clapton",
-    description: "welcome to my personal blog!",
+    description: "welcome to my personal blog! 🔥",
     theme: "auto", // ['light', 'dark', 'auto']
   },
 
