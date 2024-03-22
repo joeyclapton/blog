@@ -10,8 +10,8 @@ import { getPersonJsonLd } from '../lib/json-ld'
 export async function getStaticProps() {
   return {
     props: {
-      title: 'Zeno Rocha',
-      description: 'Obsessed with developer experience',
+      title: 'Joey Clapton',
+      description: 'Fazendo o básico bem feito.',
       image: '/static/images/home-bw.jpg',
     },
   }
@@ -27,12 +27,12 @@ export default function Index(props) {
         <meta content={title} property="og:title" />
         <meta content={description} name="description" />
         <meta content={description} property="og:description" />
-        <meta content="https://zenorocha.com" property="og:url" />
-        <meta content={`https://zenorocha.com${image}`} property="og:image" />
+        <meta content="https://joeyclapton.vercel.app" property="og:url" />
+        <meta content={`https://joeyclapton.vercel.app${image}`} property="og:image" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(getPersonJsonLd())
+            __html: JSON.stringify(getPersonJsonLd()),
           }}
           key="person-jsonld"
         />
@@ -45,9 +45,8 @@ export default function Index(props) {
             <div>
               <h1>{title}</h1>
               <p>
-                <strong>Founder & CEO at{' '}
-                  <a href="https://resend.com" target="blank">Resend</a>
-                </strong><br />
+                <strong>Desenvolvedor Front-End</strong>
+                <br />
                 {description}
               </p>
               <ShortcutHome />
