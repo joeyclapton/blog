@@ -44,9 +44,9 @@ function About(props) {
         <Section>
           <Image
             alt="Zeno"
-            src="/static/images/zeno-bw.jpg"
-            width="336"
-            height="336"
+            src="/static/images/joey.jpeg"
+            width="256"
+            height="320"
             placeholder="blur"
             blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAP0lEQVQImQE0AMv/AFBQUJKSkqmpqaOjowCurq7v7+/Jycm5ubkA////jIyMn5+fg4ODADAwMD09PWlpaQAAAApRGnEHblMWAAAAAElFTkSuQmCC"
             priority
@@ -62,15 +62,14 @@ function About(props) {
             <strong>Hey, me chamo Joey Clapton</strong>
           </Paragraph>
           <Paragraph>
-            Tenho 24 anos, nasci em Belo Horizonte, Minas Gerais 🔺, terra da cachaça, do café e do pão de queijo.
-          </Paragraph>
+            Tenho 24 anos, nasci em <strong>Belo Horizonte</strong>, <strong>Minas Gerais</strong> 🔺, terra da cachaça, do café e do pão de queijo.</Paragraph>
           <Paragraph>
-            Sou <strong>desenvolvedor front-end</strong> na <strong>CI&T</strong> e estou no 7º período do curso de <strong>Engenharia de Software</strong> na PUC Minas.
+            Sou <strong>desenvolvedor front-end</strong> na <strong>CI&T</strong> e estou no 7º período do curso de <strong>Engenharia de Software</strong> na <strong>PUC Minas</strong>.
+            Já passei por empresas como <strong>Globo.com</strong>, <strong>Hotmart</strong>, <strong>Ford</strong>, <strong>Nucont</strong> e outras mais.
           </Paragraph>
-          <Paragraph>
-            Já passei por empresas como Globo.com, Hotmart, Nucont e outras mais.
-            Por trabalhar com tecnologia e estar sempre estudando, esse foi um dos motivos da criação desse blog, compartilhar conhecimento e documentar o que estou estudando. Aqui vou falar sobre Engenharia de Software, Filosofia e algumas reflexões.
-          </Paragraph>
+          {/* <Paragraph>
+            Por trabalhar com <strong>tecnologia</strong> e estar sempre estudando, esse foi um dos motivos da criação desse blog, <strong>compartilhar</strong> conhecimento e documentar o que estou estudando. Aqui vou falar sobre <strong>Engenharia de Software</strong>, <strong>Filosofia</strong> e algumas reflexões.
+          </Paragraph> */}
         </Section>
       </Container>
     )
@@ -150,7 +149,7 @@ function About(props) {
 
       {renderIntro()}
 
-      <h2>Career</h2>
+      <h2>Carreira</h2>
       {renderAll()}
 
       <Toast

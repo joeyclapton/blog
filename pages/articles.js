@@ -73,7 +73,7 @@ function Articles(props) {
   }
 
   const { title, image } = props
-  const description = `Here you can find all the <strong>${props.allPosts.length} articles</strong> I wrote. You can read about web development, software engineering, and tech career in both English and Portuguese.`
+  const description = `Aqui você poderá encontrar todos os meus <strong>${props.allPosts.length} artigos</strong> que eu escrevi. Escreve sobre tech, desenvolvimento de software, filosofia, produtividade e outras coisas.`
 
   return (
     <>

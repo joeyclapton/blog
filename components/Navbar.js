@@ -11,10 +11,7 @@ export default function Navbar() {
     'About',
     'Articles',
     'Projects',
-    'Talks',
     'Podcasts',
-    'Investing',
-    'Uses',
     'Reminder',
   ]
   const [hovered, setHovered] = useState('')
@@ -43,9 +40,9 @@ export default function Navbar() {
                         css={
                           router.pathname == path
                             ? {
-                                color: '$primary',
-                                '&::after': { opacity: 1 },
-                              }
+                              color: '$primary',
+                              '&::after': { opacity: 1 },
+                            }
                             : ''
                         }
                       >
