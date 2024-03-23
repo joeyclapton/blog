@@ -21,8 +21,8 @@ export async function getStaticProps() {
   ]
 
   const featuredPosts = [
-    getPostBySlug('how-is-life-post-yc', featuredParams),
-    getPostBySlug('the-two-types-of-quality', featuredParams),
+    getPostBySlug('hello-world', featuredParams),
+    getPostBySlug('hello-world', featuredParams),
   ]
 
   return {
@@ -73,7 +73,7 @@ function Articles(props) {
   }
 
   const { title, image } = props
-  const description = `Aqui você poderá encontrar todos os meus <strong>${props.allPosts.length} artigos</strong> que eu escrevi. Escreve sobre tech, desenvolvimento de software, filosofia, produtividade e outras coisas.`
+  const description = `Aqui você poderá encontrar todos os meus <strong>${props.allPosts.length} artigos</strong> que eu escrevi. Escreve sobre tech, desenvolvimento de software, filosofia e outras coisas mais`
 
   return (
     <>
@@ -89,8 +89,8 @@ function Articles(props) {
       <AnimateSharedLayout>
         <p dangerouslySetInnerHTML={{ __html: description }} />
 
-        <h2>Featured Articles</h2>
-        <FeaturedArticles>{renderFeatured()}</FeaturedArticles>
+        {/* <h2>Featured Articles</h2>
+        <FeaturedArticles>{renderFeatured()}</FeaturedArticles> */}
 
         <h2>All Articles</h2>
         <ListGroup>{renderAll()}</ListGroup>
