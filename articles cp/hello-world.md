@@ -7,8 +7,6 @@ date: "2011-04-12"
 
 Era terça-feira, dia 5 de abril.
 
-Entro na sala da Uniriotec Consultoria (Empresa Jr. da Unirio), no meio de uma entusiasmada conversa entre [Victor Fontes](http://victorfontes.com/), [Arlindo Pereira](http://nighto.net/), [Tiago Veloso](http://tiagoveloso.com/) e [Pedro Marins](http://pedromarins.com/).
-
 O assunto era a difícil tarefa de manter a regularidade de postagem nos seus respectivos blogs pessoais.
 
 Resolveram então fazer uma aposta, ou você mantém a regularidade de 2 posts por semana ou paga um engradado de cerveja.
