@@ -28,7 +28,7 @@ export async function getStaticProps() {
   return {
     props: {
       title: 'Articles // Zeno Rocha',
-      tagline: 'Stories. Updates. Guides.',
+      tagline: 'Dicas. Tutoriais. Aprendizados.',
       image: '/static/images/articles-bw.jpg',
       primaryColor: 'yellow',
       secondaryColor: 'pink',
