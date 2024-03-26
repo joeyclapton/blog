@@ -10,8 +10,8 @@ export default function Navbar() {
   const pages = [
     'About',
     'Articles',
-    // 'Projects',
-    'Podcasts',
+    'Bookmarks',
+    'Photos',
     'Reminder',
   ]
   const [hovered, setHovered] = useState('')

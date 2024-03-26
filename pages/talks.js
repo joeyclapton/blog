@@ -10,7 +10,7 @@ import items from '../data/talks'
 
 export async function getStaticProps() {
   const meta = {
-    title: 'Talks // Zeno Rocha',
+    title: 'Talks // Joey Clapton',
     tagline: 'Confs. Meetups. Events.',
     image: '/static/images/talks-bw.jpg',
     primaryColor: 'purple',

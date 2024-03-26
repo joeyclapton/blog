@@ -27,7 +27,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      title: 'Articles // Zeno Rocha',
+      title: 'Articles // Joey Clapton',
       tagline: 'Dicas. Tutoriais. Aprendizados.',
       image: '/static/images/articles-bw.jpg',
       primaryColor: 'yellow',

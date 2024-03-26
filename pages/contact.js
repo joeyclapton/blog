@@ -8,7 +8,7 @@ import { styled } from '../stitches.config'
 
 export async function getStaticProps() {
   const meta = {
-    title: 'Contact // Zeno Rocha',
+    title: 'Contact // Joey Clapton',
     tagline: 'Email me. Like in the old days.',
     image: '/static/images/reminder-bw.jpg',
     primaryColor: 'cyan',
@@ -44,7 +44,7 @@ function Contact(props) {
       setIsEmailSent(true)
       setShowToast(true)
     }
-    catch(e) {
+    catch (e) {
       console.error(e)
       setIsEmailSent(false)
       setShowToast(true)
