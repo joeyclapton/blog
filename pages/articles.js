@@ -10,7 +10,6 @@ import { AnimateSharedLayout } from 'framer-motion'
 
 export async function getStaticProps() {
   const allPosts = getAllPosts(['date', 'skip', 'slug', 'title'])
-
   const featuredParams = [
     'date',
     'slug',
