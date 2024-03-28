@@ -12,7 +12,7 @@ export async function getStaticProps() {
     props: {
       title: 'Joey Clapton',
       description: 'Fazendo o básico bem feito.',
-      image: '/static/images/home-bw.jpg',
+      image: '/static/images/cat-home.jpeg',
     },
   }
 }
