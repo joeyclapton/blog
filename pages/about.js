@@ -143,8 +143,8 @@ function About(props) {
         <meta content={title} property="og:title" />
         <meta content={stripHtml(description)} name="description" />
         <meta content={stripHtml(description)} property="og:description" />
-        <meta content="https://zenorocha.com/about" property="og:url" />
-        <meta content={`https://zenorocha.com${image}`} property="og:image" />
+        <meta content="https://https://joeyclapton.vercel.app/about" property="og:url" />
+        <meta content={`https://https://joeyclapton.vercel.app${image}`} property="og:image" />
       </Head>
 
       {renderIntro()}

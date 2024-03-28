@@ -1,7 +1,7 @@
 ---
-title: "Where we are and what’s to come"
+title: 'Where we are and what’s to come'
 description: "2015 has been an incredible year for CustomElements.io. I'm incredibly proud of every single step we made as a team and extremely grateful for having such a vibrant community around us. This story is about how we went from this image below to what we have now and what are the plans for 2016."
-date: "2015-12-17"
+date: '2015-12-17'
 ---
 
 2015 has been an incredible year for [CustomElements.io](https://customelements.io/).
@@ -52,6 +52,6 @@ In the end, our goal is to make it dead-simple for developers to share their wor
 
 > “Having a site dedicated to components is and will continue to be important. Applications and development flows that take full advantage of the HTML APIs presented by web components are going to benefit from staying in that environment. There’s nothing preventing a developer from using a widget developed with this or that library, but it’s that cognitive switch that will be optimized against. The future holds a large number of reimplementations of existing widgets in its path, and sites like CustomElements.io are going to be important to manage them.”
 >
-> [> “Developing Web Components” book](https://books.google.com/books?id=7mvIBgAAQBAJ&pg=PA225&lpg=PA225&dq=customelements.io+zenorocha.com&source=bl&ots=O5QG-cKr5r&sig=XA-hkqGpkbBbtqTVlphq64FZTx8&hl=en&sa=X&ved=0ahUKEwjat93Ox-HJAhVHxGMKHSSLCq44ChDoAQgyMAQ#v=onepage&q=customelements.io%20zenorocha.com&f=false)
+> [> “Developing Web Components” book](https://books.google.com/books?id=7mvIBgAAQBAJ&pg=PA225&lpg=PA225&dq=customelements.io+https://joeyclapton.vercel.app&source=bl&ots=O5QG-cKr5r&sig=XA-hkqGpkbBbtqTVlphq64FZTx8&hl=en&sa=X&ved=0ahUKEwjat93Ox-HJAhVHxGMKHSSLCq44ChDoAQgyMAQ#v=onepage&q=customelements.io%20https://joeyclapton.vercel.app&f=false)
 
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>

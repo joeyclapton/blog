@@ -977,7 +977,7 @@ const items = [
         presentations: [
           {
             title: 'O que eu aprendi em 4 anos como dev front-end',
-            url: 'http://talks.zenorocha.com/2013/frontinaracaju/',
+            url: 'http://talks.https://joeyclapton.vercel.app/2013/frontinaracaju/',
           },
         ],
       },
@@ -1037,7 +1037,7 @@ const items = [
         presentations: [
           {
             title: 'O que eu aprendi em 4 anos como dev front-end',
-            url: 'http://talks.zenorocha.com/2013/frontinbahia/',
+            url: 'http://talks.https://joeyclapton.vercel.app/2013/frontinbahia/',
           },
         ],
       },
@@ -1055,7 +1055,7 @@ const items = [
         presentations: [
           {
             title: 'O que eu aprendi em 4 anos como dev front-end',
-            url: 'http://talks.zenorocha.com/2013/secot/',
+            url: 'http://talks.https://joeyclapton.vercel.app/2013/secot/',
             video: 'https://www.youtube.com/watch?v=qo_k5xppvTI',
           },
         ],
@@ -1132,7 +1132,7 @@ const items = [
         presentations: [
           {
             title: 'Reintroducing AlloyUI',
-            url: 'http://talks.zenorocha.com/2013/alloy-webinar/',
+            url: 'http://talks.https://joeyclapton.vercel.app/2013/alloy-webinar/',
             video:
               'http://www.liferay.com/video?title=video-web-event-introducing-alloy-2-0',
           },
@@ -1165,7 +1165,7 @@ const items = [
         presentations: [
           {
             title: 'Alloy UI: Past, Present & Future',
-            url: 'http://talks.zenorocha.com/2012/new-alloy-website/',
+            url: 'http://talks.https://joeyclapton.vercel.app/2012/new-alloy-website/',
           },
         ],
       },
@@ -1177,7 +1177,7 @@ const items = [
         presentations: [
           {
             title: 'Realidade aumentada com JavaScript',
-            url: 'http://talks.zenorocha.com/2012/devfest',
+            url: 'http://talks.https://joeyclapton.vercel.app/2012/devfest',
             video:
               'http://www.infoq.com/br/presentations/realidade-aumentada-html5',
           },
@@ -1206,7 +1206,7 @@ const items = [
         presentations: [
           {
             title: 'Como usar HTML5 sem uma máquina do tempo',
-            url: 'http://talks.zenorocha.com/2012/ideais',
+            url: 'http://talks.https://joeyclapton.vercel.app/2012/ideais',
           },
         ],
       },
@@ -1219,7 +1219,7 @@ const items = [
         presentations: [
           {
             title: 'Realidade aumentada com JavaScript',
-            url: 'http://talks.zenorocha.com/2012/simonsen/',
+            url: 'http://talks.https://joeyclapton.vercel.app/2012/simonsen/',
           },
         ],
       },
@@ -1245,7 +1245,7 @@ const items = [
         presentations: [
           {
             title: 'O que eu aprendi em 3 anos como dev front-end',
-            url: 'http://talks.zenorocha.com/2012/frontinmaceio/',
+            url: 'http://talks.https://joeyclapton.vercel.app/2012/frontinmaceio/',
           },
         ],
       },
@@ -1257,7 +1257,7 @@ const items = [
         presentations: [
           {
             title: 'Realidade aumentada com JavaScript',
-            url: 'http://talks.zenorocha.com/2012/w3c/',
+            url: 'http://talks.https://joeyclapton.vercel.app/2012/w3c/',
           },
         ],
       },
@@ -1269,7 +1269,7 @@ const items = [
         presentations: [
           {
             title: 'Arte digital na web: onde começar?',
-            url: 'http://talks.zenorocha.com/2012/rcuritiba/',
+            url: 'http://talks.https://joeyclapton.vercel.app/2012/rcuritiba/',
             video: 'http://www.youtube.com/watch?v=V8QZMO8rr8g',
           },
         ],
@@ -1282,7 +1282,7 @@ const items = [
         presentations: [
           {
             title: 'O que eu aprendi em 3 anos como dev front-end',
-            url: 'http://talks.zenorocha.com/2012/frontinmaringa/',
+            url: 'http://talks.https://joeyclapton.vercel.app/2012/frontinmaringa/',
           },
         ],
       },
@@ -1294,7 +1294,7 @@ const items = [
         presentations: [
           {
             title: 'Como fugir do feijão com arroz usando Canvas, SVG e WebGL',
-            url: 'http://talks.zenorocha.com/2012/souwebpel/',
+            url: 'http://talks.https://joeyclapton.vercel.app/2012/souwebpel/',
           },
         ],
       },
@@ -1307,7 +1307,7 @@ const items = [
         presentations: [
           {
             title: 'Como não virar um Zumbi: Kit de sobrevivência',
-            url: 'http://talks.zenorocha.com/2012/braziljs/',
+            url: 'http://talks.https://joeyclapton.vercel.app/2012/braziljs/',
           },
         ],
       },
@@ -1320,7 +1320,7 @@ const items = [
         presentations: [
           {
             title: 'Canvas, SVG e WebGL',
-            url: 'http://talks.zenorocha.com/2012/tablelessconf/',
+            url: 'http://talks.https://joeyclapton.vercel.app/2012/tablelessconf/',
           },
         ],
       },
@@ -1332,7 +1332,7 @@ const items = [
         presentations: [
           {
             title: 'Mitos do Front-end',
-            url: 'http://talks.zenorocha.com/2012/tdc-sc/',
+            url: 'http://talks.https://joeyclapton.vercel.app/2012/tdc-sc/',
           },
         ],
       },
@@ -1344,7 +1344,7 @@ const items = [
         presentations: [
           {
             title: 'CSS Sucks!',
-            url: 'http://talks.zenorocha.com/2012/frontinpoa/',
+            url: 'http://talks.https://joeyclapton.vercel.app/2012/frontinpoa/',
           },
         ],
       },
@@ -1356,7 +1356,7 @@ const items = [
         presentations: [
           {
             title: 'Mitos do Front-end',
-            url: 'http://talks.zenorocha.com/2012/qconsp/',
+            url: 'http://talks.https://joeyclapton.vercel.app/2012/qconsp/',
             video:
               'http://www.infoq.com/br/presentations/mitos-desenvolvimento-frontend',
           },
@@ -1370,7 +1370,7 @@ const items = [
         presentations: [
           {
             title: 'Como fugir do feijão com arroz usando Canvas, SVG e WebGL',
-            url: 'http://talks.zenorocha.com/2012/fisl/',
+            url: 'http://talks.https://joeyclapton.vercel.app/2012/fisl/',
             video: 'http://www.youtube.com/watch?v=ukjHPwg74ik',
           },
         ],
@@ -1384,7 +1384,7 @@ const items = [
         presentations: [
           {
             title: 'CSS Sucks!',
-            url: 'http://talks.zenorocha.com/2012/frontinbh/',
+            url: 'http://talks.https://joeyclapton.vercel.app/2012/frontinbh/',
             video: 'https://www.youtube.com/watch?v=E7FQCHBicO0',
           },
         ],
@@ -1397,7 +1397,7 @@ const items = [
         presentations: [
           {
             title: 'Como usar HTML5 sem uma máquina do tempo',
-            url: 'http://talks.zenorocha.com/2012/tdc-sp/',
+            url: 'http://talks.https://joeyclapton.vercel.app/2012/tdc-sp/',
           },
         ],
       },
@@ -1409,7 +1409,7 @@ const items = [
         presentations: [
           {
             title: 'Como usar HTML5 sem uma máquina do tempo',
-            url: 'http://talks.zenorocha.com/2012/frontincuritiba/',
+            url: 'http://talks.https://joeyclapton.vercel.app/2012/frontincuritiba/',
           },
         ],
       },
@@ -1422,7 +1422,7 @@ const items = [
         presentations: [
           {
             title: 'CSS Sucks!',
-            url: 'http://talks.zenorocha.com/2012/frontinrio/',
+            url: 'http://talks.https://joeyclapton.vercel.app/2012/frontinrio/',
           },
         ],
       },
@@ -1434,7 +1434,7 @@ const items = [
         presentations: [
           {
             title: 'How to use Canvas, SVG and WebGL without a time machine',
-            url: 'http://talks.zenorocha.com/2012/jsconf/',
+            url: 'http://talks.https://joeyclapton.vercel.app/2012/jsconf/',
             video: 'http://blip.tv/jsconfar/zeno_rocha-6279969',
           },
         ],
@@ -1448,7 +1448,7 @@ const items = [
         presentations: [
           {
             title: 'Como fugir do feijão com arroz usando Canvas, SVG e WebGL',
-            url: 'http://talks.zenorocha.com/2012/pernambucojs/',
+            url: 'http://talks.https://joeyclapton.vercel.app/2012/pernambucojs/',
           },
         ],
       },
@@ -1461,7 +1461,7 @@ const items = [
         presentations: [
           {
             title: 'Como usar HTML5 sem uma máquina do tempo',
-            url: 'http://talks.zenorocha.com/2012/beagajs/',
+            url: 'http://talks.https://joeyclapton.vercel.app/2012/beagajs/',
           },
         ],
       },

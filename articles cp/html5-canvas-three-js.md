@@ -1,13 +1,13 @@
 ---
 title: HTML5 - Canvas + Three.js
-description: "Ahh o tão badalado canvas. Sempre um dos tópicos mais abordados quando o assunto é HTML5. Você já deve ter ouvido muito falar dele e, assim como eu, ter se impressionado com os diversos experimentos que surgem todos os dias pela internet."
+description: 'Ahh o tão badalado canvas. Sempre um dos tópicos mais abordados quando o assunto é HTML5. Você já deve ter ouvido muito falar dele e, assim como eu, ter se impressionado com os diversos experimentos que surgem todos os dias pela internet.'
 image: /static/img/tumblr/tumblr_lrou6aDK1U1qe3219.jpg
 slug: html5-canvas-three-js
 lang: pt-BR
-date: "2011-08-14"
+date: '2011-08-14'
 ---
 
-<!-- <p class="demo-download"><a href="http://labs.zenorocha.com/html5/canvas/" target="_blank"><img src="/static/img/tumblr/tumblr_lk325lvHwF1qe3219.png" class="botao"/></a> <a href="https://github.com/zenorocha/HTML5-Canvas" target="_blank"><img src="/static/img/tumblr/tumblr_lk325u7HMG1qe3219.png" class="botao"/></a> -->
+<!-- <p class="demo-download"><a href="http://labs.https://joeyclapton.vercel.app/html5/canvas/" target="_blank"><img src="/static/img/tumblr/tumblr_lk325lvHwF1qe3219.png" class="botao"/></a> <a href="https://github.com/zenorocha/HTML5-Canvas" target="_blank"><img src="/static/img/tumblr/tumblr_lk325u7HMG1qe3219.png" class="botao"/></a> -->
 
 Ahh o tão badalado canvas. Sempre um dos tópicos mais abordados quando o assunto é HTML5. Você já deve ter ouvido muito falar dele e, assim como eu, ter se impressionado com os [diversos experimentos](http://www.canvasdemos.com/) que surgem todos os dias pela internet.
 
@@ -44,13 +44,13 @@ O exemplo será bem simples, criar um cubo e interagir com ele. Tudo isso, é cl
 Pra começar, vamos instanciar a câmera e definir seu posicionamento.
 
 ```js
-camera = new THREE.Camera(70, canvasWidth / canvasHeight, 1, 1000);
+camera = new THREE.Camera(70, canvasWidth / canvasHeight, 1, 1000)
 
-camera.position.y = 150;
+camera.position.y = 150
 
-camera.position.z = 500;
+camera.position.z = 500
 
-camera.target.position.y = 150;
+camera.target.position.y = 150
 ```
 
 Depois vamos armazenar as cores das faces em um vetor com 6 posições e atribuir essas cores para cada uma das faces do material.
@@ -68,35 +68,35 @@ for (var i = 0; i &lt; 6; i++) {
 Então criamos um mesh, um grafo tridimensional que contém os vértices, faces e materiais de um objeto 3D. Aí instancio o cubo passando esse mesh e atribuindo uma posição.
 
 ```js
-var mesh = new THREE.Cube(250, 250, 250, 1, 1, 1, materiais);
+var mesh = new THREE.Cube(250, 250, 250, 1, 1, 1, materiais)
 
-cubo = new THREE.Mesh(mesh, new THREE.MeshFaceMaterial() );
+cubo = new THREE.Mesh(mesh, new THREE.MeshFaceMaterial())
 
-cubo.position.y = 150;
+cubo.position.y = 150
 ```
 
 Criamos a cena e atribuimos o cubo nela.
 
 ```js
-cena = new THREE.Scene();
+cena = new THREE.Scene()
 
-cena.addObject(cubo);
+cena.addObject(cubo)
 ```
 
 E também precisamos definir o objeto que vai renderizar esse canvas.
 
 ```js
-renderer = new THREE.CanvasRenderer();
+renderer = new THREE.CanvasRenderer()
 
-renderer.setSize(canvasWidth, canvasHeight);
+renderer.setSize(canvasWidth, canvasHeight)
 
-container.appendChild( renderer.domElement );
+container.appendChild(renderer.domElement)
 ```
 
 Por fim, definimos que o container estará escutando pelo evento de quando o mouse está clicado e que quando esse evento for disparado chamará a função onMouseDown.
 
 ```js
-container.addEventListener('mousedown', onMouseDown, false);
+container.addEventListener('mousedown', onMouseDown, false)
 ```
 
 E agora paramos por aqui antes que esse post fique enorme, se você quiser saber mais sobre o resto das funções é só acessar o [repositório do github que contém o código completo](https://github.com/zenorocha/HTML5-Canvas).
@@ -109,8 +109,8 @@ E agora paramos por aqui antes que esse post fique enorme, se você quiser saber
 yepnope({
   test: Modernizr.canvas,
   yep: ['build/Three.js', 'js/RequestAnimationFrame.js', 'js/canvas.js'],
-  nope: 'css/canvas-polyfill.css'
-});
+  nope: 'css/canvas-polyfill.css',
+})
 ```
 
 E o resultado:

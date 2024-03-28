@@ -1,10 +1,10 @@
 ---
 title: Conversores de Flash em HTML5 e a disputa entre Google e Adobe
-description: "Um dos recentes lançamentos da Google reavivou a briguinha Flash vs HTML5. Seu nome é Swiffy e é mais um que entra pra galeria dos conversores de Flash para HTML5, abrindo inúmeras possibilidades para dispositivos móveis."
+description: 'Um dos recentes lançamentos da Google reavivou a briguinha Flash vs HTML5. Seu nome é Swiffy e é mais um que entra pra galeria dos conversores de Flash para HTML5, abrindo inúmeras possibilidades para dispositivos móveis.'
 image: /static/img/tumblr/tumblr_lnvzxjaOFe1qe3219.jpg
 slug: conversores-de-flash-em-html5
 lang: pt-BR
-date: "2011-07-11"
+date: '2011-07-11'
 ---
 
 Um dos recentes lançamentos da Google reavivou a briguinha Flash vs HTML5. Seu nome é [Swiffy](http://swiffy.googlelabs.com/) e é mais um que entra pra galeria dos conversores de Flash para HTML5, <span>abrindo inúmeras possibilidades para dispositivos móveis</span>.
@@ -42,14 +42,14 @@ Mas que tal testarmos com algo “real”, porque certamente esses arquivos fora
 Pra isso queria escolher alguma coisa legal, quem sabe um exemplo do [Box2D](http://www.box2dflash.org/).
 
 <div class="iframe-wrap">
-  <iframe src="http://labs.zenorocha.com/conversor/swf/box2d.swf" width="500" height="276">
+  <iframe src="http://labs.https://joeyclapton.vercel.app/conversor/swf/box2d.swf" width="500" height="276">
   </iframe>
 </div>
 
 Porém, vamos tirando o cavalinho da chuva porque o conversor só funciona com arquivos feitos em ActionScript 3 e não AS2\. Portanto, decidi montar um exemplo simples e que atendesse todos os pré-requisitos mínimos para uma boa conversão.
 
 <div class="iframe-wrap">
-  <iframe src="http://labs.zenorocha.com/conversor/swf/torpedo.swf" width="500" height="450">
+  <iframe src="http://labs.https://joeyclapton.vercel.app/conversor/swf/torpedo.swf" width="500" height="450">
   </iframe>
 </div>
 
@@ -58,7 +58,7 @@ E…tam tam tam…
 O tão esperado resultado.
 
 <div class="iframe-wrap">
-  <iframe src="http://labs.zenorocha.com/conversor/swf/torpedo.html" width="500" height="450">
+  <iframe src="http://labs.https://joeyclapton.vercel.app/conversor/swf/torpedo.html" width="500" height="450">
   </iframe>
 </div>
 
@@ -89,7 +89,7 @@ Lembrando que estes arquivos .fla devem ser gerados apenas na versão CS5 do Fla
 Para o teste com a ferramenta da Adobe utilizei aquele mesmo jogo acima do Torpedo.
 
 <div class="iframe-wrap">
-  <iframe src="http://labs.zenorocha.com/conversor/swf/wallaby.html" width="500" height="450">
+  <iframe src="http://labs.https://joeyclapton.vercel.app/conversor/swf/wallaby.html" width="500" height="450">
   </iframe>
 </div>
 

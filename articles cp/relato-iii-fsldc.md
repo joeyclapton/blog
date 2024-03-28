@@ -1,9 +1,9 @@
 ---
 title: Relato - III FSLDC
-description: "Nesse último sábado, dia 04 de junho, rolou um evento de destaque no cenário do software livre do estado do Rio de Janeiro. Foi o III Fórum de Software Livre de Duque de Caxias que reuniu mais de 300 pessoas, dentre elas algumas personalidades como Rasmus Ledorf, criador do PHP e Jon “Maddog” Hall, Diretor Executivo da Linux Internacional."
+description: 'Nesse último sábado, dia 04 de junho, rolou um evento de destaque no cenário do software livre do estado do Rio de Janeiro. Foi o III Fórum de Software Livre de Duque de Caxias que reuniu mais de 300 pessoas, dentre elas algumas personalidades como Rasmus Ledorf, criador do PHP e Jon “Maddog” Hall, Diretor Executivo da Linux Internacional.'
 image: /static/img/tumblr/tumblr_lmi7zscD5Z1qe3219.png
 lang: pt-BR
-date: "2011-06-10"
+date: '2011-06-10'
 ---
 
 Nesse último sábado, dia 04 de junho, rolou um evento de destaque no cenário do software livre do estado do Rio de Janeiro. Foi o III Fórum de Software Livre de Duque de Caxias que reuniu mais de 300 pessoas, dentre elas algumas personalidades como [Rasmus Ledorf](http://pt.wikipedia.org/wiki/Rasmus_Lerdorf), criador do [PHP](http://br.php.net/) e [Jon “Maddog” Hall](http://pt.wikipedia.org/wiki/Jon_Hall), Diretor Executivo da [Linux Internacional](http://pt.wikipedia.org/wiki/Linux_International).
@@ -38,7 +38,7 @@ No mesmo horário tinham palestras excelentes no outros auditórios, como a do 
 
 Pessoalmente acho que foi bem legal, o feedback depois da apresentação também foi positivo e acho que consegui passar minha ideia pro pessoal.
 
-Se você perdeu, pode ver os slides no endereço [labs.zenorocha.com/html5/slides](http://labs.zenorocha.com/html5/slides) (use as setas do teclado para passar de slide). E se você foi, outros feedbacks são muito bem-vindos nos comentários :)
+Se você perdeu, pode ver os slides no endereço [labs.https://joeyclapton.vercel.app/html5/slides](http://labs.https://joeyclapton.vercel.app/html5/slides) (use as setas do teclado para passar de slide). E se você foi, outros feedbacks são muito bem-vindos nos comentários :)
 
 ![](/static/img/tumblr/tumblr_lmk4bfWcMG1qe3219.jpg)
 

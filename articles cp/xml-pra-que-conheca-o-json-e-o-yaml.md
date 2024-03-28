@@ -1,8 +1,8 @@
 ---
 title: XML pra quê? Conheça o JSON e o YAML
-description: "Por muito tempo o XML dominou a web quando o assunto era serialização de dados. Aos poucos, outras linguagens foram se popularizando e conquistando desenvolvedores por conta das fraquezas desse padrão recomendado pela W3C. Enquanto isso, poderosas redes sociais, como o Twitter, foram adotando linguagens como o JSON ao fornecer dados através de suas APIs. E com isso, tomando grandes proporções no mercado."
+description: 'Por muito tempo o XML dominou a web quando o assunto era serialização de dados. Aos poucos, outras linguagens foram se popularizando e conquistando desenvolvedores por conta das fraquezas desse padrão recomendado pela W3C. Enquanto isso, poderosas redes sociais, como o Twitter, foram adotando linguagens como o JSON ao fornecer dados através de suas APIs. E com isso, tomando grandes proporções no mercado.'
 lang: pt-BR
-date: "2011-04-13"
+date: '2011-04-13'
 ---
 
 Por muito tempo o XML dominou a web quando o assunto era serialização de dados. Aos poucos, outras linguagens foram se popularizando e conquistando desenvolvedores por conta das fraquezas desse padrão recomendado pela W3C.
@@ -21,7 +21,7 @@ Vejamos, então, um exemplo de uma estrutura de dados usando **JSON**.
 ```json
 {
   "nome": "zeno rocha - blog",
-  "url": "https://zenorocha.com",
+  "url": "https://https://joeyclapton.vercel.app",
   "posts": [
     {
       "titulo": "do it! - as simple as you can",
@@ -40,7 +40,7 @@ A mesma estrutura utilizando **YAML**:
 ```yml
 blog:
   nome: "zeno rocha - blog"
-  url: "https://zenorocha.com"
+  url: "https://https://joeyclapton.vercel.app"
   post:
     titulo: "do it! - as simple as you can"
     data: "13/04/2011"
@@ -55,7 +55,7 @@ E agora compare-as com o formato **XML**:
 <?xml version="1.0" encoding="utf-8"?>
 <blog>
   <nome>zeno rocha - blog</nome>
-  <url>http://blog.zenorocha.com</url>
+  <url>http://blog.https://joeyclapton.vercel.app</url>
   <post>
     <titulo>do it! - as simple as you can</titulo>
     <data>13/04/2011</data>
