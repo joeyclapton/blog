@@ -4,8 +4,10 @@ import Head from 'next/head'
 import stripHtml from '../lib/strip-html'
 import { AnimateSharedLayout } from 'framer-motion'
 import { styled } from '../stitches.config'
+import { getAllPhotos } from '../lib/blog'
 
 export async function getStaticProps() {
+  const photos = getAllPhotos();
 
   return {
     props: {
@@ -14,15 +16,16 @@ export async function getStaticProps() {
       image: '/static/images/articles-bw.jpg',
       primaryColor: 'yellow',
       secondaryColor: 'pink',
+      photos
     }
   }
 }
 
 const Photos = (props) => {
-  const { title, image } = props
+  const { title, image, photos } = props
   const description = `O homem inventa processos de registro para não ser refém do esquecimento. É a memória que nos orienta no tempo, informa-nos sobre quem somos, de onde viemos e nos dá identidade...
   </br> É a fotografia que segura relógios, retorna calendários, faz do passado presente, num instante.`
-
+  console.log(photos)
   return (
     <section>
       <Head>
@@ -38,51 +41,14 @@ const Photos = (props) => {
 
         <h2>My Photos</h2>
         <Container>
-          <Figure>
-            <Img src="https://assets.codepen.io/12005/windmill.jpg" alt="A windmill" />
-            <FigCaption><a href="#">1</a></FigCaption>
-          </Figure>
-          <Figure>
-            <Img src="https://assets.codepen.io/12005/suspension-bridge.jpg" alt="The Clifton Suspension Bridge" />
-            <FigCaption><a href="#">2</a></FigCaption>
-          </Figure>
-          <Figure>
-            <Img src="https://assets.codepen.io/12005/sunset.jpg" alt="Sunset and boats" />
-            <FigCaption><a href="#">3</a></FigCaption>
-          </Figure>
-          <Figure>
-            <Img src="https://assets.codepen.io/12005/snowy.jpg" alt="a river in the snow" />
-            <FigCaption><a href="#">4</a></FigCaption>
-          </Figure>
-          <Figure>
-            <Img src="https://assets.codepen.io/12005/bristol-balloons1.jpg" alt="a single checked balloon" />
-            <FigCaption><a href="#">5</a></FigCaption>
-          </Figure>
-          <Figure>
-            <Img src="https://assets.codepen.io/12005/dog-balloon.jpg" alt="a hot air balloon shaped like a dog" />
-            <FigCaption><a href="#">6</a></FigCaption>
-          </Figure>
-          <Figure>
-            <Img src="https://assets.codepen.io/12005/abq-balloons.jpg" alt="View from a hot air balloon of other balloons" />
-            <FigCaption><a href="#">7</a></FigCaption>
-          </Figure>
-          <Figure>
-            <Img src="https://assets.codepen.io/12005/disney-balloon.jpg" alt="a balloon fairground ride" />
-            <FigCaption><a href="#">8</a></FigCaption>
-          </Figure>
-
-          <Figure>
-            <Img src="https://assets.codepen.io/12005/bristol-harbor.jpg" alt="sunrise over a harbor" />
-            <FigCaption><a href="#">9</a></FigCaption>
-          </Figure>
-          <Figure>
-            <Img src="https://assets.codepen.io/12005/bristol-balloons2.jpg" alt="three hot air balloons in a blue sky" />
-            <FigCaption><a href="#">10</a></FigCaption>
-          </Figure>
-          <Figure>
-            <Img src="https://assets.codepen.io/12005/toronto.jpg" alt="the Toronto light up sign at night" />
-            <FigCaption><a href="#">11</a></FigCaption>
-          </Figure>
+          {
+            photos.map((url, idx) => (
+              <Figure key={url}>
+                <Img src={`/static/images/album/${url}`} alt="A windmill" />
+                <FigCaption><a href="#">{idx}</a></FigCaption>
+              </Figure>
+            ))
+          }
         </Container>
       </AnimateSharedLayout>
     </section>
