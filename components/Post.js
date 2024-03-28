@@ -14,7 +14,7 @@ export const Post = styled('main', {
 
 export const PostContainer = styled('div', {
   margin: '0 auto',
-  maxWidth: '760px',
+  maxWidth: '960px',
   padding: '0 20px',
 })
 

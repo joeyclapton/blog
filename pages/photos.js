@@ -56,7 +56,7 @@ const Photos = (props) => {
 
 const Container = styled('section', {
   columnCount: 4,
-  columnGap: '10px',
+  columnGap: '16px',
   marginTop: 24
 })
 
@@ -73,8 +73,6 @@ const Img = styled('img', {
   gridRow: '1 / -1',
   gridColumn: 1,
 })
-
-
 
 Photos.Layout = Base
 
