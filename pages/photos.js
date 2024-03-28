@@ -45,7 +45,6 @@ const Photos = (props) => {
             photos.map((url, idx) => (
               <Figure key={url}>
                 <Img src={`/static/images/album/${url}`} alt="A windmill" />
-                <FigCaption><a href="#">{idx}</a></FigCaption>
               </Figure>
             ))
           }
@@ -75,13 +74,7 @@ const Img = styled('img', {
   gridColumn: 1,
 })
 
-const FigCaption = styled('figcaption', {
-  gridRow: '2',
-  gridColumn: '1',
-  backgroundColor: 'rgba(255,255,255,.5)',
-  padding: '.2em .5em',
-  justifySelf: 'start'
-})
+
 
 Photos.Layout = Base
 
