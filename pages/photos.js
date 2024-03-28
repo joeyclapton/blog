@@ -55,7 +55,7 @@ const Photos = (props) => {
 }
 
 const Container = styled('section', {
-  columnCount: 4,
+  columnCount: 3,
   columnGap: '16px',
   marginTop: 24
 })
