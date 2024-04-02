@@ -38,6 +38,7 @@ export async function getStaticProps() {
 }
 
 function Articles(props) {
+  console.log(props)
   const renderFeatured = () => {
     return props.featuredPosts.map((post, index) => {
       return (
