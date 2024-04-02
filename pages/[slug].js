@@ -65,7 +65,7 @@ export async function getStaticProps({ params }) {
     const content = await convertMarkdownToHtml(post.content || '')
 
     const isProd = process.env.NODE_ENV === 'production'
-    const base = isProd ? 'https://https://joeyclapton.vercel.app' : 'http://localhost:3000'
+    const base = isProd ? 'https://joeyclapton.vercel.app' : 'http://localhost:3000'
 
     if (isProd) {
       const viewsReq = await fetch(`${base}/api/views/${params.slug}`)
