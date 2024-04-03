@@ -27,7 +27,7 @@ export async function getStaticProps() {
   return {
     props: {
       title: 'Articles // Joey Clapton',
-      tagline: 'Dicas. Tutoriais. Aprendizados.',
+      tagline: 'Learning. Sharing. Growing.',
       image: '/static/images/articles-bw.jpg',
       primaryColor: 'yellow',
       secondaryColor: 'pink',
