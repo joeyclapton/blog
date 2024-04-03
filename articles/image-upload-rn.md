@@ -85,8 +85,8 @@ export default function App() {
 ```
 
 Github com o código completo do projeto:
-(https://github.com/joeyclapton/image-picker-example)[https://github.com/joeyclapton/image-picker-example]
+[https://github.com/joeyclapton/image-picker-example](https://github.com/joeyclapton/image-picker-example)
 
 ### Referências
-- (https://docs.expo.dev/versions/latest/sdk/imagepicker/)[https://docs.expo.dev/versions/latest/sdk/imagepicker/]
-- (https://docs.expo.dev/tutorial/image-picker/)[https://docs.expo.dev/tutorial/image-picker/]
+- [https://docs.expo.dev/versions/latest/sdk/imagepicker/](https://docs.expo.dev/versions/latest/sdk/imagepicker/)
+- [https://docs.expo.dev/tutorial/image-picker/](https://docs.expo.dev/tutorial/image-picker/)
