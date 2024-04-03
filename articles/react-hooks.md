@@ -3,7 +3,7 @@ title: React Hooks
 description: "Hooks é uma nova maneira de escrever componentes em React"
 lang: pt-BR
 date: "2022-05-30"
-tags: ["React", "Tutorial"]
+tags: "React, Tutorial"
 ---
 
 ## O que são os _hooks_?

@@ -3,7 +3,7 @@ title: Upload de Imagens no React Native com Expo
 description: "Como fazer upload de maneira simples no React Native usando o Expo"
 lang: pt-BR
 date: "2022-10-22",
-tags: ["React Native", "Tutorial"]
+tags: "React Native, Tutorial"
 ---
 
 O ImagePicker é um plugin do Expo projetado para simplificar o processo de upload de imagens ou captura de fotos usando a câmera sem a necessidade de lidar diretamente com APIs complexas de câmera ou galeria.
