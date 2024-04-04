@@ -21,7 +21,7 @@ export async function getStaticProps() {
     Já passei por empresas como Globo.com, Hotmart, Nucont e outras mais.
     Amo trabalhar com tecnologia e estar sempre estudando, esse foi um dos motivos da criação desse blog, adoro compartilhar conhecimento e documentar o que estou estudando, aqui vou falar sobre Engenharia de Software, desenvolvimento em geral, filosofia, psicologia e algumas reflexões.
     `,
-    tagline: 'Learning. Running. Living. Repeat. 🎈',
+    tagline: 'Learning. Running. Living. Repeat.',
     image: '/static/images/about-bw.jpg',
     primaryColor: 'pink',
     secondaryColor: 'purple',
