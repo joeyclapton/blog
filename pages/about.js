@@ -67,6 +67,9 @@ function About(props) {
             Sou <strong>desenvolvedor front-end</strong> na <strong>CI&T</strong> e estou no 7º período do curso de <strong>Engenharia de Software</strong> na <strong>PUC Minas</strong>.
             Já passei por empresas como <strong>Globo.com</strong>, <strong>Hotmart</strong>, <strong>Ford</strong>, <strong>Nucont</strong> e outras mais.
           </Paragraph>
+          <Paragraph>
+            Nas horas vagas sou corredor, escrevo poemas, estudo sobre cafés e vinhos, além de outras coisinhas.
+          </Paragraph>
           {/* <Paragraph>
             Por trabalhar com <strong>tecnologia</strong> e estar sempre estudando, esse foi um dos motivos da criação desse blog, <strong>compartilhar</strong> conhecimento e documentar o que estou estudando. Aqui vou falar sobre <strong>Engenharia de Software</strong>, <strong>Filosofia</strong> e algumas reflexões.
           </Paragraph> */}
