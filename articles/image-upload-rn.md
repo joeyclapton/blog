@@ -2,7 +2,7 @@
 title: Upload de Imagens no React Native com Expo
 description: "Como fazer upload de maneira simples no React Native usando o Expo"
 lang: pt-BR
-date: "2022-10-22"
+date: "2024-4-22"
 tags: "React Native, Tutorial"
 ---
 
