@@ -31,13 +31,6 @@ export default function Index(props) {
         <meta content={`https://joeyclapton.vercel.app${image}`} property="og:image" />
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16540281702">
 </script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-      
-        gtag('config', 'AW-16540281702');
-      </script>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
