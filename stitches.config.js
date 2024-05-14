@@ -27,7 +27,7 @@ export const {
     },
     fonts: {
       body: 'Biotif, sans-serif',
-      code: 'Fira Code, monospace',
+      code: 'DM Mono, monospace',
       heading: 'Neuzeit Grotesk Bold, sans-serif',
     },
     space: {
@@ -84,7 +84,7 @@ const globalStyles = globalCss({
     borderRadius: '$borderRadius',
     color: '$primary',
     fontFamily: '$code',
-    fontSize: '15px',
+    fontSize: '18px',
   },
   ':not(pre) > code': {
     padding: '4px',
@@ -147,9 +147,8 @@ const globalStyles = globalCss({
       fontStyle: 'normal',
     },
     {
-      fontFamily: 'Fira Code',
-      src: `url("/static/font/FiraCode-Regular.woff2") format("woff2"),
-        url("/static/font/FiraCode-Regular.woff") format("woff")`,
+      fontFamily: 'DM Mono',
+      src: `url("/static/font/DMMono-Regular.ttf") format("ttf")`,
       fontWeight: 'normal',
       fontStyle: 'normal',
     },
