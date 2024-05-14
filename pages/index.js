@@ -11,7 +11,7 @@ export async function getStaticProps() {
   return {
     props: {
       title: 'Joey Clapton',
-      description: 'Fazendo o básico bem feito.',
+      description: 'Fazendo o básico bem feito 🎈',
       image: '/static/images/cat-home.jpeg',
     },
   }
