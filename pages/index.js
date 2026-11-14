@@ -5,19 +5,22 @@ import Footer from '../components/Footer'
 import ShortcutHome from '../components/ShortcutHome'
 import { PostMain, PostContent, PostContainer } from '../components/Post'
 import { Wrapper } from '../components/Wrapper'
+import { pick, siteUrl } from '../lib/i18n'
 
-export async function getStaticProps() {
+export async function getStaticProps({ locale }) {
   return {
     props: {
       title: 'Joey Clapton',
-      description: 'Fazendo o básico bem feito 🎈',
+      role: pick(locale, { en: 'Software Engineer', pt: 'Engenheiro de Software' }),
+      description: pick(locale, { en: 'Doing the basics, and doing them well 🎈', pt: 'Fazendo o básico bem feito 🎈' }),
       image: '/static/images/me.jpeg',
+      url: siteUrl(locale),
     },
   }
 }
 
 export default function Index(props) {
-  const { title, description, image } = props
+  const { title, role, description, image, url } = props
 
   return (
     <Wrapper>
@@ -26,7 +29,7 @@ export default function Index(props) {
         <meta content={title} property="og:title" />
         <meta content={description} name="description" />
         <meta content={description} property="og:description" />
-        <meta content="https://joeyclapton.vercel.app" property="og:url" />
+        <meta content={url} property="og:url" />
         <meta content={`https://joeyclapton.vercel.app${image}`} property="og:image" />
       </Head>
 
@@ -37,7 +40,7 @@ export default function Index(props) {
             <div>
               <h1>{title}</h1>
               <p>
-                <strong>Engenheiro de Software</strong>
+                <strong>{role}</strong>
                 <br />
                 {description}
               </p>
