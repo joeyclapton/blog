@@ -6,6 +6,7 @@ import { useRouter } from 'next/router'
 import { motion } from 'framer-motion'
 import { useKBar } from 'kbar'
 import { useT, siteUrl } from '../lib/i18n'
+import LanguageSwitch from './LanguageSwitch'
 
 export default function Navbar() {
   const router = useRouter()
@@ -19,8 +20,6 @@ export default function Navbar() {
   ]
   const [hovered, setHovered] = useState('')
   const { query } = useKBar()
-  // a mesma página no outro idioma (o Next põe o /pt-BR na frente)
-  const aqui = { pathname: router.pathname, query: router.query }
 
   return (
     <Header>
@@ -74,13 +73,7 @@ export default function Navbar() {
           <link rel="alternate" hrefLang="en" href={siteUrl('en', router.asPath === '/' ? '' : router.asPath)} />
           <link rel="alternate" hrefLang="pt-BR" href={siteUrl('pt-BR', router.asPath === '/' ? '' : router.asPath)} />
         </Head>
-        <Idiomas aria-label={t({ en: 'Language', pt: 'Idioma' })}>
-          {[['en', '🇺🇸', 'English'], ['pt-BR', '🇧🇷', 'Português']].map(([locale, curto, nome]) => (
-            <Link key={locale} href={aqui} as={router.asPath} locale={locale} passHref legacyBehavior>
-              <Idioma lang={locale} title={nome} aria-label={nome} aria-current={router.locale === locale ? 'true' : undefined}>{curto}</Idioma>
-            </Link>
-          ))}
-        </Idiomas>
+        <LanguageSwitch />
         <ButtonHeader
           as="button"
           type="button"
@@ -161,29 +154,6 @@ const Aside = styled('div', {
   alignItems: 'center',
   paddingRight: '12px',
   marginLeft: 'auto',
-})
-
-// 🇺🇸 | 🇧🇷: a língua atual acesa, a outra apagada (emoji ignora color, então é por opacity)
-const Idiomas = styled('nav', {
-  display: 'flex',
-  alignItems: 'center',
-  marginRight: '4px',
-})
-
-const Idioma = styled('a', {
-  border: 0,
-  borderRadius: '$borderRadius',
-  color: '$secondary',
-  fontSize: '18px',
-  opacity: 0.4,
-  fontWeight: 500,
-  letterSpacing: '1.2px',
-  lineHeight: '34px',
-  padding: '0 8px',
-  textDecoration: 'none',
-  transition: 'color $duration ease-in-out, background $duration ease-in-out',
-  '&:hover, &:focus-visible': { color: '$primary', background: '$hover', opacity: 1 },
-  '&[aria-current="true"]': { color: '$primary', opacity: 1 },
 })
 
 const Anchor = styled('a', {
