@@ -4,12 +4,15 @@ import { styled } from '../stitches.config'
 import Base from '../layouts/Base'
 import stripHtml from '../lib/strip-html'
 import items from '../data/projects'
+import { pick, siteUrl } from '../lib/i18n'
 
-export async function getStaticProps() {
+export async function getStaticProps({ locale }) {
   return {
     props: {
-      title: 'Projects // Joey Clapton',
-      tagline: 'Build. Ship. Repeat.',
+      locale,
+      title: pick(locale, { en: 'Projects // Joey Clapton', pt: 'Projetos // Joey Clapton' }),
+      tagline: pick(locale, { en: 'Build. Ship. Repeat.', pt: 'Construir. Lançar. Repetir.' }),
+      url: siteUrl(locale, '/projects'),
       image: '/static/images/projects-bw.jpg',
       primaryColor: 'cyan',
       secondaryColor: 'green',
@@ -18,8 +21,11 @@ export async function getStaticProps() {
 }
 
 function Projects(props) {
-  const { title, image } = props
-  const description = `Projetos pessoais que eu desenho e construo do zero, <strong>do produto ao código</strong>.`
+  const { title, image, url, locale } = props
+  const description = pick(locale, {
+    en: `Personal projects I design and build from scratch, <strong>from product to code</strong>.`,
+    pt: `Projetos pessoais que eu desenho e construo do zero, <strong>do produto ao código</strong>.`,
+  })
 
   return (
     <>
@@ -28,7 +34,7 @@ function Projects(props) {
         <meta content={title} property="og:title" />
         <meta content={stripHtml(description)} name="description" />
         <meta content={stripHtml(description)} property="og:description" />
-        <meta content="https://joeyclapton.vercel.app/projects" property="og:url" />
+        <meta content={url} property="og:url" />
         <meta content={`https://joeyclapton.vercel.app${image}`} property="og:image" />
       </Head>
 
@@ -44,9 +50,9 @@ function Projects(props) {
               ) : (
                 project.title
               )}
-              <Status>{project.status}</Status>
+              <Status>{pick(locale, project.status)}</Status>
             </Title>
-            <Description>{project.description}</Description>
+            <Description>{pick(locale, project.description)}</Description>
             <Stack>
               {project.stack.map(tech => <li key={tech}>{tech}</li>)}
             </Stack>
