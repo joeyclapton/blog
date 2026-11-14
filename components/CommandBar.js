@@ -1,6 +1,7 @@
 import { styled } from '../stitches.config'
 import { Box } from './Box'
 import Toast from './Toast'
+import { pick } from '../lib/i18n'
 import { useRef, useState, forwardRef } from 'react'
 import { useRouter } from 'next/router'
 import {
@@ -21,6 +22,7 @@ import homeIcon from '../public/static/icons/home.json'
 import articlesIcon from '../public/static/icons/articles.json'
 import projectsIcon from '../public/static/icons/projects.json'
 import usesIcon from '../public/static/icons/uses.json'
+import reminderIcon from '../public/static/icons/reminder.json'
 
 export default function CommandBar(props) {
   const copyLinkRef = useRef()
@@ -31,7 +33,9 @@ export default function CommandBar(props) {
   const articlesRef = useRef()
   const projectsRef = useRef()
   const photosRef = useRef()
+  const reminderRef = useRef()
   const router = useRouter()
+  const t = text => pick(router.locale, text)
   const [showToast, setShowToast] = useState(false)
 
   const copyLink = () => {
@@ -44,86 +48,96 @@ export default function CommandBar(props) {
   const actions = [
     {
       id: 'copy',
-      name: 'Copy Link',
+      name: t({ en: 'Copy Link', pt: 'Copiar link' }),
       shortcut: ['l'],
       keywords: 'copy-link',
-      section: 'General',
+      section: t({ en: 'General', pt: 'Geral' }),
       perform: copyLink,
       icon: <Lottie lottieRef={copyLinkRef} style={iconSize} animationData={copyLinkIcon} loop={false} autoplay={false} />,
     },
     {
       id: 'email',
-      name: 'Send Email',
+      name: t({ en: 'Send Email', pt: 'Mandar e-mail' }),
       shortcut: ['e'],
       keywords: 'send-email',
-      section: 'General',
+      section: t({ en: 'General', pt: 'Geral' }),
       perform: () => router.push('/contact'),
       icon: <Lottie lottieRef={emailRef} style={iconSize} animationData={emailIcon} loop={false} autoplay={false} />,
     },
     {
       id: 'source',
-      name: 'View Source',
+      name: t({ en: 'View Source', pt: 'Ver o código' }),
       shortcut: ['s'],
       keywords: 'view-source',
-      section: 'General',
+      section: t({ en: 'General', pt: 'Geral' }),
       perform: () =>
         window.open('https://github.com/joeyclapton/blog', '_blank'),
       icon: <Lottie lottieRef={sourceRef} style={iconSize} animationData={sourceIcon} loop={false} autoplay={false} />,
     },
     {
       id: 'home',
-      name: 'Home',
+      name: t({ en: 'Home', pt: 'Início' }),
       shortcut: ['g', 'h'],
       keywords: 'go-home',
-      section: 'Go To',
+      section: t({ en: 'Go To', pt: 'Ir para' }),
       perform: () => router.push('/'),
       icon: <Lottie lottieRef={homeRef} style={iconSize} animationData={homeIcon} loop={false} autoplay={false} />,
     },
     {
       id: 'about',
-      name: 'About',
+      name: t({ en: 'About', pt: 'Sobre' }),
       shortcut: ['g', 'a'],
       keywords: 'go-about',
-      section: 'Go To',
+      section: t({ en: 'Go To', pt: 'Ir para' }),
       perform: () => router.push('/about'),
       icon: <Lottie lottieRef={aboutRef} style={iconSize} animationData={aboutIcon} loop={false} autoplay={false} />,
     },
     {
       id: 'articles',
-      name: 'Articles',
+      name: t({ en: 'Articles', pt: 'Artigos' }),
       shortcut: ['g', 'b'],
       keywords: 'go-articles',
-      section: 'Go To',
+      section: t({ en: 'Go To', pt: 'Ir para' }),
       perform: () => router.push('/articles'),
       icon: <Lottie lottieRef={articlesRef} style={iconSize} animationData={articlesIcon} loop={false} autoplay={false} />,
     },
     {
       id: 'projects',
-      name: 'Projects',
+      name: t({ en: 'Projects', pt: 'Projetos' }),
       shortcut: ['g', 'p'],
       keywords: 'go-projects',
-      section: 'Go To',
+      section: t({ en: 'Go To', pt: 'Ir para' }),
       perform: () => router.push('/projects'),
       icon: <Lottie lottieRef={projectsRef} style={iconSize} animationData={projectsIcon} loop={false} autoplay={false} />,
     },
     {
       id: 'photos',
-      name: 'Photos',
+      name: t({ en: 'Photos', pt: 'Fotos' }),
       shortcut: ['g', 'f'],
       keywords: 'go-photos',
-      section: 'Go To',
+      section: t({ en: 'Go To', pt: 'Ir para' }),
       perform: () => router.push('/photos'),
       icon: <Lottie lottieRef={photosRef} style={iconSize} animationData={usesIcon} loop={false} autoplay={false} />,
+    },
+    {
+      id: 'reminder',
+      name: t({ en: 'Reminder', pt: 'Lembrete' }),
+      shortcut: ['g', 'r'],
+      keywords: 'go-reminder',
+      section: t({ en: 'Go To', pt: 'Ir para' }),
+      perform: () => router.push('/reminder'),
+      icon: <Lottie lottieRef={reminderRef} style={iconSize} animationData={reminderIcon} loop={false} autoplay={false} />,
     },
   ]
 
   return (
     <>
-      <KBarProvider actions={actions}>
+      {/* o kbar registra as ações uma vez: trocar o idioma remonta a barra com os nomes novos */}
+      <KBarProvider key={router.locale} actions={actions}>
         <KBarPortal>
           <Positioner>
             <Animator>
-              <Search placeholder="Type a command or search…" />
+              <Search defaultPlaceholder={t({ en: 'Type a command or search…', pt: 'Digite um comando ou busque…' })} /> {/* o KBarSearch ignora placeholder */}
               <RenderResults />
             </Animator>
           </Positioner>
@@ -133,8 +147,8 @@ export default function CommandBar(props) {
       </KBarProvider>
 
       <Toast
-        title="Copied :D"
-        description="You can now share it with anyone."
+        title={t({ en: 'Copied :D', pt: 'Copiado :D' })}
+        description={t({ en: 'You can now share it with anyone.', pt: 'Agora é só compartilhar.' })}
         isSuccess={true}
         showToast={showToast}
         setShowToast={setShowToast}
