@@ -75,7 +75,7 @@ export default function Navbar() {
           <link rel="alternate" hrefLang="pt-BR" href={siteUrl('pt-BR', router.asPath === '/' ? '' : router.asPath)} />
         </Head>
         <Idiomas aria-label={t({ en: 'Language', pt: 'Idioma' })}>
-          {[['en', 'EN', 'English'], ['pt-BR', 'PT', 'Português']].map(([locale, curto, nome]) => (
+          {[['en', '🇺🇸', 'English'], ['pt-BR', '🇧🇷', 'Português']].map(([locale, curto, nome]) => (
             <Link key={locale} href={aqui} as={router.asPath} locale={locale} passHref legacyBehavior>
               <Idioma lang={locale} title={nome} aria-label={nome} aria-current={router.locale === locale ? 'true' : undefined}>{curto}</Idioma>
             </Link>
@@ -163,7 +163,7 @@ const Aside = styled('div', {
   marginLeft: 'auto',
 })
 
-// EN | PT: a língua atual em branco, a outra apagada (como os itens do menu)
+// 🇺🇸 | 🇧🇷: a língua atual acesa, a outra apagada (emoji ignora color, então é por opacity)
 const Idiomas = styled('nav', {
   display: 'flex',
   alignItems: 'center',
@@ -174,7 +174,8 @@ const Idioma = styled('a', {
   border: 0,
   borderRadius: '$borderRadius',
   color: '$secondary',
-  fontSize: '12px',
+  fontSize: '18px',
+  opacity: 0.4,
   fontWeight: 500,
   letterSpacing: '1.2px',
   lineHeight: '34px',
@@ -182,7 +183,7 @@ const Idioma = styled('a', {
   textDecoration: 'none',
   transition: 'color $duration ease-in-out, background $duration ease-in-out',
   '&:hover, &:focus-visible': { color: '$primary', background: '$hover', opacity: 1 },
-  '&[aria-current="true"]': { color: '$primary' },
+  '&[aria-current="true"]': { color: '$primary', opacity: 1 },
 })
 
 const Anchor = styled('a', {
