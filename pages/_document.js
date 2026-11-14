@@ -9,10 +9,11 @@ export default class extends Document {
   }
 
   render() {
-    const lang = this.props.__NEXT_DATA__.props.pageProps?.post?.lang
+    // o artigo diz a própria língua; o resto do site segue o idioma escolhido no topo
+    const lang = this.props.__NEXT_DATA__.props.pageProps?.lang || this.props.locale
 
     return (
-      <Html lang={lang ? lang : 'pt-BR'}>
+      <Html lang={lang}>
         <Head>
           <meta charSet="utf-8" />
           <meta content="Joey Clapton" name="author" />
