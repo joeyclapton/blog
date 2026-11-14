@@ -5,14 +5,13 @@ import Footer from '../components/Footer'
 import ShortcutHome from '../components/ShortcutHome'
 import { PostMain, PostContent, PostContainer } from '../components/Post'
 import { Wrapper } from '../components/Wrapper'
-import { getPersonJsonLd } from '../lib/json-ld'
 
 export async function getStaticProps() {
   return {
     props: {
       title: 'Joey Clapton',
       description: 'Fazendo o básico bem feito 🎈',
-      image: '/static/images/cat-home.jpeg',
+      image: '/static/images/me.jpeg',
     },
   }
 }
@@ -29,13 +28,6 @@ export default function Index(props) {
         <meta content={description} property="og:description" />
         <meta content="https://joeyclapton.vercel.app" property="og:url" />
         <meta content={`https://joeyclapton.vercel.app${image}`} property="og:image" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(getPersonJsonLd()),
-          }}
-          key="person-jsonld"
-        />
       </Head>
 
       <Navbar />
@@ -45,7 +37,7 @@ export default function Index(props) {
             <div>
               <h1>{title}</h1>
               <p>
-                <strong>Desenvolvedor Front-End</strong>
+                <strong>Engenheiro de Software</strong>
                 <br />
                 {description}
               </p>
