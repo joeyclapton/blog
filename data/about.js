@@ -3,7 +3,7 @@ const items = [
     jobTitle: 'Software Engineer',
     company: 'Plank',
     companyUrl: 'https://joinplank.com',
-    startDate: '2026-05-01',
+    startDate: '2024-07-01',
     location: 'Remote',
   },
   {
@@ -11,7 +11,7 @@ const items = [
     company: 'CI&T',
     companyUrl: 'https://ciandt.com',
     startDate: '2022-06-01',
-    endDate: '2026-05-01',
+    endDate: '2024-06-01',
     location: 'Remote',
   },
   {
@@ -26,16 +26,8 @@ const items = [
     jobTitle: 'Front-end Engineer',
     company: 'Nucont',
     companyUrl: 'https://nucont.com/',
-    startDate: '2018-09-01',
+    startDate: '2020-01-01',
     endDate: '2021-03-01',
-    location: 'Belo Horizonte, Brazil',
-  },
-  {
-    jobTitle: 'Front-end Engineer',
-    company: 'Merx TI',
-    companyUrl: 'https://merxti.com.br/',
-    startDate: '2018-01-01',
-    endDate: '2018-08-01',
     location: 'Belo Horizonte, Brazil',
   },
 ]
