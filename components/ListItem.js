@@ -9,7 +9,7 @@ export default function ListItem(props) {
   if (props.href.charAt(0) === '/') {
     return (
       <ArticleItem>
-        <Link href={props.href} passHref>
+        <Link href={props.href} passHref legacyBehavior>
           <Anchor>
             <Animation index={props.index}>
               <Title>{props.title}</Title>
