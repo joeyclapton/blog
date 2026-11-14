@@ -1,20 +1,26 @@
 import { styled } from '../stitches.config'
 import { useState } from 'react'
 import Link from 'next/link'
+import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { motion } from 'framer-motion'
 import { useKBar } from 'kbar'
+import { useT, siteUrl } from '../lib/i18n'
 
 export default function Navbar() {
   const router = useRouter()
+  const t = useT()
   const pages = [
-    'About',
-    'Projects',
-    'Articles',
-    'Photos',
+    ['about', { en: 'About', pt: 'Sobre' }],
+    ['projects', { en: 'Projects', pt: 'Projetos' }],
+    ['articles', { en: 'Articles', pt: 'Artigos' }],
+    ['photos', { en: 'Photos', pt: 'Fotos' }],
+    ['reminder', { en: 'Reminder', pt: 'Lembrete' }],
   ]
   const [hovered, setHovered] = useState('')
   const { query } = useKBar()
+  // a mesma página no outro idioma (o Next põe o /pt-BR na frente)
+  const aqui = { pathname: router.pathname, query: router.query }
 
   return (
     <Header>
@@ -24,16 +30,17 @@ export default function Navbar() {
 
       <Nav>
         <List>
-          {pages.map(page => {
-            const path = `/${page.toLowerCase()}`
-            const isHovered = hovered === page
+          {pages.map(([slug, label]) => {
+            const page = t(label)
+            const path = `/${slug}`
+            const isHovered = hovered === slug
 
             return (
-              <li key={page}>
+              <li key={slug}>
                 <Link href={path} passHref legacyBehavior>
                   <Anchor>
                     <NavContainer
-                      onHoverStart={() => setHovered(page)}
+                      onHoverStart={() => setHovered(slug)}
                       onHoverEnd={() => setHovered('')}
                       css={
                         router.pathname == path
@@ -63,6 +70,17 @@ export default function Navbar() {
       </Nav>
 
       <Aside>
+        <Head>
+          <link rel="alternate" hrefLang="en" href={siteUrl('en', router.asPath === '/' ? '' : router.asPath)} />
+          <link rel="alternate" hrefLang="pt-BR" href={siteUrl('pt-BR', router.asPath === '/' ? '' : router.asPath)} />
+        </Head>
+        <Idiomas aria-label={t({ en: 'Language', pt: 'Idioma' })}>
+          {[['en', 'EN', 'English'], ['pt-BR', 'PT', 'Português']].map(([locale, curto, nome]) => (
+            <Link key={locale} href={aqui} as={router.asPath} locale={locale} passHref legacyBehavior>
+              <Idioma lang={locale} title={nome} aria-label={nome} aria-current={router.locale === locale ? 'true' : undefined}>{curto}</Idioma>
+            </Link>
+          ))}
+        </Idiomas>
         <ButtonHeader
           as="button"
           type="button"
@@ -143,6 +161,28 @@ const Aside = styled('div', {
   alignItems: 'center',
   paddingRight: '12px',
   marginLeft: 'auto',
+})
+
+// EN | PT: a língua atual em branco, a outra apagada (como os itens do menu)
+const Idiomas = styled('nav', {
+  display: 'flex',
+  alignItems: 'center',
+  marginRight: '4px',
+})
+
+const Idioma = styled('a', {
+  border: 0,
+  borderRadius: '$borderRadius',
+  color: '$secondary',
+  fontSize: '12px',
+  fontWeight: 500,
+  letterSpacing: '1.2px',
+  lineHeight: '34px',
+  padding: '0 8px',
+  textDecoration: 'none',
+  transition: 'color $duration ease-in-out, background $duration ease-in-out',
+  '&:hover, &:focus-visible': { color: '$primary', background: '$hover', opacity: 1 },
+  '&[aria-current="true"]': { color: '$primary' },
 })
 
 const Anchor = styled('a', {
