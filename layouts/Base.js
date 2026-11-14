@@ -1,4 +1,4 @@
-import { styled } from '../stitches.config'
+import { styled, keyframes } from '../stitches.config'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import { PostMain, PostContent, PostContainer } from '../components/Post'
@@ -20,13 +20,14 @@ export default function Base({ children }) {
         }}
       >
         <PostContent>
-          <PostContainer>
+          <PostContainer key={title}>
             <GradientTitle
               css={{
                 backgroundImage: `linear-gradient(
                 135deg,
                 $${primaryColor} 0%,
-                $${secondaryColor} 100%
+                $${secondaryColor} 50%,
+                $${primaryColor} 100%
               );`,
               }}
             >
@@ -41,8 +42,15 @@ export default function Base({ children }) {
   )
 }
 
+const shimmer = keyframes({
+  from: { backgroundPosition: '0% 50%' },
+  to: { backgroundPosition: '100% 50%' },
+})
+
 const GradientTitle = styled('h1', {
-  backgroundSize: '100%',
+  backgroundSize: '200% 100%',
+  animation: `${shimmer} 6s ease-in-out infinite alternate`,
+  '@media (prefers-reduced-motion: reduce)': { animation: 'none' },
   backgroundClip: 'text',
   WebkitBackgroundClip: 'text',
   MozBackgroundClip: 'text',
