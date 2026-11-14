@@ -1,70 +1,25 @@
-import React from 'react'
 import Head from 'next/head'
-import { AnimateSharedLayout } from 'framer-motion'
+import Image from 'next/image'
+import { styled } from '../stitches.config'
 import Base from '../layouts/Base'
-import FeaturedProject from '../components/FeaturedProject'
-import { FeaturedProjects } from '../components/FeaturedProjects'
 import stripHtml from '../lib/strip-html'
 import items from '../data/projects'
 
 export async function getStaticProps() {
-  const meta = {
-    title: 'Projects // Joey Clapton',
-    tagline: 'Work. Hobby. Open Source.',
-    image: '/static/images/projects-bw.jpg',
-    primaryColor: 'cyan',
-    secondaryColor: 'green',
+  return {
+    props: {
+      title: 'Projects // Joey Clapton',
+      tagline: 'Build. Ship. Repeat.',
+      image: '/static/images/projects-bw.jpg',
+      primaryColor: 'cyan',
+      secondaryColor: 'green',
+    },
   }
-
-  return { props: meta }
 }
 
 function Projects(props) {
-  const renderFeatured = () => {
-    const featured = ['Dracula PRO', 'Clipboard.js', 'Resend', 'React Email']
-
-    return items
-      .map(item => {
-        return item.projects.filter(project => featured.includes(project.title))
-      })
-      .filter(item => {
-        if (item.length > 0) {
-          return item
-        }
-      })
-      .flat()
-      .map((item, index) => {
-        return <FeaturedProject key={index} project={item} />
-      })
-  }
-
-  const renderAll = () => {
-    return items.map((item, index) => {
-      return (
-        <div key={index}>
-          <h3>{item.year}</h3>
-          <ul>
-            {item.projects.map((project, pIndex) => {
-              return <ProjectItem key={pIndex} project={project} />
-            })}
-          </ul>
-        </div>
-      )
-    })
-  }
-
-  const getTotalProjects = () => {
-    let total = 0
-
-    for (let i = 0; i < items.length; i++) {
-      total = total + items[i].projects.length
-    }
-
-    return total
-  }
-
   const { title, image } = props
-  const description = `I'm obsessed with side projects and <strong>building in public</strong>. Here you can navigate to <strong>${getTotalProjects()} different</strong> websites, apps, and libraries I built. Some projects are still active, others have been discontinued.`
+  const description = `Projetos pessoais que eu desenho e construo do zero, <strong>do produto ao código</strong>.`
 
   return (
     <>
@@ -73,34 +28,76 @@ function Projects(props) {
         <meta content={title} property="og:title" />
         <meta content={stripHtml(description)} name="description" />
         <meta content={stripHtml(description)} property="og:description" />
-        <meta content="https://https://joeyclapton.vercel.app/projects" property="og:url" />
-        <meta content={`https://https://joeyclapton.vercel.app${image}`} property="og:image" />
+        <meta content="https://joeyclapton.vercel.app/projects" property="og:url" />
+        <meta content={`https://joeyclapton.vercel.app${image}`} property="og:image" />
       </Head>
 
-      <AnimateSharedLayout>
-        <p dangerouslySetInnerHTML={{ __html: description }} />
+      <p dangerouslySetInnerHTML={{ __html: description }} />
 
-        <h2>Featured Projects</h2>
-        <FeaturedProjects>{renderFeatured()}</FeaturedProjects>
-
-        <h2>All Projects</h2>
-        {renderAll()}
-      </AnimateSharedLayout>
+      {items.map(project => (
+        <Card key={project.title}>
+          <Image src={project.icon} alt="" width={64} height={64} style={{ width: 64, height: 64, minWidth: 64, borderRadius: 14 }} />
+          <div style={{ minWidth: 0 }}>
+            <Title>
+              {project.url ? (
+                <a href={project.url} target="_blank" rel="noreferrer">{project.title} ↗</a>
+              ) : (
+                project.title
+              )}
+              <Status>{project.status}</Status>
+            </Title>
+            <Description>{project.description}</Description>
+            <Stack>
+              {project.stack.map(tech => <li key={tech}>{tech}</li>)}
+            </Stack>
+          </div>
+        </Card>
+      ))}
     </>
   )
 }
 
-function ProjectItem(props) {
-  const { project } = props
+const Card = styled('article', {
+  display: 'flex',
+  gap: 20,
+  margin: '40px 0',
+})
 
-  return (
-    <li>
-      <a href={project.url} target="_blank">
-        {project.title}
-      </a>
-    </li>
-  )
-}
+const Title = styled('h3', {
+  margin: 0,
+  display: 'flex',
+  flexWrap: 'wrap',
+  alignItems: 'center',
+  gap: 10,
+})
+
+const Status = styled('span', {
+  color: '$secondary',
+  fontSize: 12,
+  fontWeight: 500,
+  letterSpacing: '1.2px',
+  textTransform: 'uppercase',
+})
+
+const Description = styled('p', {
+  margin: '8px 0',
+})
+
+const Stack = styled('ul', {
+  display: 'flex',
+  flexWrap: 'wrap',
+  gap: 8,
+  listStyle: 'none',
+  padding: 0,
+  margin: 0,
+  fontSize: 13,
+  color: '$secondary',
+  '& li': {
+    border: '1px solid $hover',
+    borderRadius: '$borderRadius',
+    padding: '2px 8px',
+  },
+})
 
 Projects.Layout = Base
 
