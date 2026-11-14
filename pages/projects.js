@@ -67,6 +67,11 @@ const Card = styled('article', {
   display: 'flex',
   gap: 20,
   margin: '40px 0',
+  '& img': { transition: 'transform 400ms cubic-bezier(0.34, 1.56, 0.64, 1)' },
+  '&:hover img': { transform: 'rotate(-6deg) scale(1.08)' },
+  '& li': { transition: 'border-color 200ms, color 200ms' },
+  '&:hover li': { borderColor: '$secondary', color: '$primary' },
+  '@media (prefers-reduced-motion: reduce)': { '&:hover img': { transform: 'none' } },
 })
 
 const Title = styled('h3', {
