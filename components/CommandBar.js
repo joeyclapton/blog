@@ -12,6 +12,7 @@ import {
   KBarPositioner,
   KBarSearch,
   KBarResults,
+  useRegisterActions,
 } from 'kbar'
 import Lottie from 'lottie-react'
 import copyLinkIcon from '../public/static/icons/copy-link.json'
@@ -132,8 +133,8 @@ export default function CommandBar(props) {
 
   return (
     <>
-      {/* o kbar registra as ações uma vez: trocar o idioma remonta a barra com os nomes novos */}
-      <KBarProvider key={router.locale} actions={actions}>
+      <KBarProvider>
+        <Acoes actions={actions} locale={router.locale} />
         <KBarPortal>
           <Positioner>
             <Animator>
@@ -155,6 +156,13 @@ export default function CommandBar(props) {
       />
     </>
   )
+}
+
+// registra as ações e troca os nomes quando o idioma muda, sem remontar o site
+// (remontar cortava a animação da troca de bandeira no menu)
+function Acoes({ actions, locale }) {
+  useRegisterActions(actions, [locale])
+  return null
 }
 
 function RenderResults() {
