@@ -1,4 +1,4 @@
-import { styled } from '../stitches.config'
+import { styled, keyframes } from '../stitches.config'
 
 export const PostMain = styled('main', {
   '@bp2': { padding: '$navHeightDesktop 0' },
@@ -12,10 +12,23 @@ export const Post = styled('main', {
   flex: '1 1',
 })
 
+const rise = keyframes({
+  from: { opacity: 0, transform: 'translateY(12px)', filter: 'blur(4px)' },
+  to: { opacity: 1, transform: 'none', filter: 'none' },
+})
+
+// cada bloco da página entra um pouco depois do anterior; do 9º em diante entram juntos
+const stagger = Object.fromEntries(
+  Array.from({ length: 8 }, (_, i) => [`& > *:nth-child(${i + 1})`, { animationDelay: `${i * 70}ms` }])
+)
+
 export const PostContainer = styled('div', {
   margin: '0 auto',
   maxWidth: '960px',
   padding: '0 20px',
+  '& > *': { animation: `${rise} 600ms cubic-bezier(0.22, 1, 0.36, 1) both`, animationDelay: '560ms' },
+  ...stagger,
+  '@media (prefers-reduced-motion: reduce)': { '& > *': { animation: 'none' } },
 })
 
 export const PostContent = styled('div', {
