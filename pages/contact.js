@@ -9,7 +9,7 @@ import { styled } from '../stitches.config'
 export async function getStaticProps() {
   const meta = {
     title: 'Contact // Joey Clapton',
-    tagline: 'Email me. Like in the old days.',
+    tagline: 'Manda um e-mail. Como antigamente.',
     image: '/static/images/reminder-bw.jpg',
     primaryColor: 'cyan',
     secondaryColor: 'green',
@@ -20,7 +20,7 @@ export async function getStaticProps() {
 
 function Contact(props) {
   const { title, image } = props
-  const description = `<strong>I love chatting</strong> with software engineers, tech founders, students, and creators. <strong>I'm a busy person</strong>, so I can't promise that I'll reply to your email right away, but I'll try my best to respond in a timely manner.`
+  const description = `<strong>Adoro conversar</strong> com quem constrói produto: devs, designers, fundadores e estudantes. Pode ser sobre um projeto, uma vaga ou só pra trocar ideia. <strong>Respondo assim que der.</strong>`
   const [isEmailSent, setIsEmailSent] = React.useState(undefined)
   const [showToast, setShowToast] = React.useState(false)
 
@@ -28,10 +28,7 @@ function Contact(props) {
     e.preventDefault()
 
     try {
-      const isProd = process.env.NODE_ENV === 'production'
-      const base = isProd ? 'https://https://joeyclapton.vercel.app' : 'http://localhost:3000'
-
-      await fetch(`${base}/api/email`, {
+      const res = await fetch('/api/email', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -40,6 +37,7 @@ function Contact(props) {
           message: e.target.message.value,
         }),
       })
+      if (!res.ok) throw new Error((await res.json()).message)
 
       setIsEmailSent(true)
       setShowToast(true)
@@ -58,34 +56,34 @@ function Contact(props) {
         <meta content={title} property="og:title" />
         <meta content={stripHtml(description)} name="description" />
         <meta content={stripHtml(description)} property="og:description" />
-        <meta content="https://https://joeyclapton.vercel.app/contact" property="og:url" />
-        <meta content={`https://https://joeyclapton.vercel.app${image}`} property="og:image" />
+        <meta content="https://joeyclapton.vercel.app/contact" property="og:url" />
+        <meta content={`https://joeyclapton.vercel.app${image}`} property="og:image" />
       </Head>
 
       <Box>
         <p dangerouslySetInnerHTML={{ __html: description }} />
-        <h2>Send an email</h2>
+        <h2>Mandar e-mail</h2>
         <Form onSubmit={onSendEmail}>
           <FormGroup>
-            <Label htmlFor="name">Name</Label>
-            <Input id="name" type="text" placeholder="James Bond" required />
+            <Label htmlFor="name">Nome</Label>
+            <Input id="name" type="text" placeholder="Seu nome" required />
           </FormGroup>
           <FormGroup>
-            <Label htmlFor="email">Email</Label>
-            <Input id="email" type="email" placeholder="james@bond.com" required />
+            <Label htmlFor="email">E-mail</Label>
+            <Input id="email" type="email" placeholder="voce@email.com" required />
           </FormGroup>
           <FormGroup>
-            <Label htmlFor="message">Message</Label>
-            <Textarea id="message" placeholder="How can I help you?" rows="4" required />
+            <Label htmlFor="message">Mensagem</Label>
+            <Textarea id="message" placeholder="Como posso ajudar?" rows="4" required />
           </FormGroup>
           <FormGroup>
-            <Button type="submit">Send</Button>
+            <Button type="submit">Enviar</Button>
           </FormGroup>
         </Form>
 
         <Toast
           title={isEmailSent ? 'Email sent :D' : 'Error :('}
-          description={isEmailSent ? 'Thanks for taking the time to write it.' : 'Something wrong happened. Try again later.'}
+          description={isEmailSent ? 'Valeu pela mensagem, respondo em breve.' : 'Algo deu errado. Tenta de novo mais tarde.'}
           isSuccess={isEmailSent}
           showToast={showToast}
           setShowToast={setShowToast}
