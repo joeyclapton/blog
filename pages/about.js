@@ -16,11 +16,7 @@ import downloadIcon from '../public/static/icons/download.json'
 export async function getStaticProps() {
   const meta = {
     title: 'About // Joey Clapton',
-    description: `
-    Me chamo Joey Clapton , tenho 23 anos, nasci em Belo Horizonte, Minas Gerais 🔺, terra da cachaça, do café e do pão de queijo. Trabalho como desenvolvedor front-end na CI&T e estou no 6º período do curso de Engenharia de Software na PUC Minas.
-    Já passei por empresas como Globo.com, Hotmart, Nucont e outras mais.
-    Amo trabalhar com tecnologia e estar sempre estudando, esse foi um dos motivos da criação desse blog, adoro compartilhar conhecimento e documentar o que estou estudando, aqui vou falar sobre Engenharia de Software, desenvolvimento em geral, filosofia, psicologia e algumas reflexões.
-    `,
+    description: `Joey Clapton é engenheiro de software na Plank, em Belo Horizonte. Constrói produtos de ponta a ponta, da interface à integração com o back-end, e já passou por CI&T, Hotmart, Globo.com, Ford e Nucont. Nas horas vagas desenvolve os apps Mesa Posta e Tá Vindo.`,
     tagline: 'Learning. Running. Living. Repeat.',
     image: '/static/images/about-bw.jpg',
     primaryColor: 'pink',
@@ -62,13 +58,13 @@ function About(props) {
             <strong>Hey, me chamo Joey Clapton</strong>
           </Paragraph>
           <Paragraph>
-            Tenho 24 anos, nasci em <strong>Belo Horizonte</strong>, <strong>Minas Gerais</strong> 🔺, terra da cachaça, do café e do pão de queijo.</Paragraph>
+            Nasci em <strong>Belo Horizonte</strong>, <strong>Minas Gerais</strong> 🔺, terra da cachaça, do café e do pão de queijo.</Paragraph>
           <Paragraph>
-            Sou <strong>desenvolvedor front-end</strong> na <strong>CI&T</strong> e estou no 7º período do curso de <strong>Engenharia de Software</strong> na <strong>PUC Minas</strong>.
-            Já passei por empresas como <strong>Globo.com</strong>, <strong>Hotmart</strong>, <strong>Ford</strong>, <strong>Nucont</strong> e outras mais.
+            Sou <strong>engenheiro de software</strong> na <strong>Plank</strong>, onde construo produtos e provas de conceito de ponta a ponta, da interface à integração com sistemas como o SAP.
+            Antes passei por <strong>CI&T</strong>, <strong>Hotmart</strong>, <strong>Globo.com</strong>, <strong>Ford</strong>, <strong>Nucont</strong> e outras.
           </Paragraph>
           <Paragraph>
-            Nas horas vagas sou corredor, escrevo poemas, estudo sobre cafés e vinhos, além de outras coisinhas.
+            Nas horas vagas construo meus próprios apps, como o <a href="/projects">Mesa Posta e o Tá Vindo</a>. Também corro, escrevo poemas e estudo sobre cafés e vinhos.
           </Paragraph>
           {/* <Paragraph>
             Por trabalhar com <strong>tecnologia</strong> e estar sempre estudando, esse foi um dos motivos da criação desse blog, <strong>compartilhar</strong> conhecimento e documentar o que estou estudando. Aqui vou falar sobre <strong>Engenharia de Software</strong>, <strong>Filosofia</strong> e algumas reflexões.
@@ -146,8 +142,8 @@ function About(props) {
         <meta content={title} property="og:title" />
         <meta content={stripHtml(description)} name="description" />
         <meta content={stripHtml(description)} property="og:description" />
-        <meta content="https://https://joeyclapton.vercel.app/about" property="og:url" />
-        <meta content={`https://https://joeyclapton.vercel.app${image}`} property="og:image" />
+        <meta content="https://joeyclapton.vercel.app/about" property="og:url" />
+        <meta content={`https://joeyclapton.vercel.app${image}`} property="og:image" />
       </Head>
 
       {renderIntro()}
