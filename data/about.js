@@ -1,9 +1,17 @@
 const items = [
   {
+    jobTitle: 'Software Engineer',
+    company: 'Plank',
+    companyUrl: 'https://joinplank.com',
+    startDate: '2026-05-01',
+    location: 'Remote',
+  },
+  {
     jobTitle: 'Front-end Engineer',
     company: 'CI&T',
     companyUrl: 'https://ciandt.com',
     startDate: '2022-06-01',
+    endDate: '2026-05-01',
     location: 'Remote',
   },
   {
