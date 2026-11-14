@@ -12,11 +12,11 @@ function Post(props) {
 
   const title = `${props.title} // Joey Clapton`
   const description = props.description || ''
-  const url = `https://https://joeyclapton.vercel.app/${props.slug}`
+  const url = `https://joeyclapton.vercel.app/${props.slug}`
   const date = new Date(props.date).toISOString()
   const image = props.image
-    ? `https://https://joeyclapton.vercel.app${props.image}`
-    : 'https://https://joeyclapton.vercel.app/static/images/home-opt.jpg'
+    ? `https://joeyclapton.vercel.app${props.image}`
+    : 'https://joeyclapton.vercel.app/static/images/home-opt.jpg'
 
   return (
     <>
@@ -34,11 +34,11 @@ function Post(props) {
       </Head>
 
       <ArticleJsonLd
-        authorName="Zeno Rocha"
+        author="Joey Clapton"
         type="Blog"
         url={url}
-        title={title}
-        images={[image]}
+        headline={title}
+        image={[image]}
         datePublished={date}
         dateModified={date}
         description={props.description}
@@ -82,7 +82,7 @@ export async function getStaticProps({ params }) {
       revalidate: 60,
     }
   } catch (e) {
-    return { props: { errorCode: 404 } }
+    return { notFound: true }
   }
 }
 
