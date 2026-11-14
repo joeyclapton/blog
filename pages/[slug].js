@@ -2,17 +2,19 @@ import Head from 'next/head'
 import { ArticleJsonLd } from 'next-seo'
 import Blogpost from '../layouts/Blogpost'
 import ErrorMessage from '../components/ErrorMessage'
+import { useRouter } from 'next/router'
 import { getPostBySlug, getAllPosts, convertMarkdownToHtml } from '../lib/blog'
+import { siteUrl } from '../lib/i18n'
 
 function Post(props) {
-  console.log(props)
+  const { locale } = useRouter()
   if (props.errorCode) {
     return <ErrorMessage code={props.errorCode} />
   }
 
   const title = `${props.title} // Joey Clapton`
   const description = props.description || ''
-  const url = `https://joeyclapton.vercel.app/${props.slug}`
+  const url = siteUrl(locale, `/${props.slug}`)
   const date = new Date(props.date).toISOString()
   const image = props.image
     ? `https://joeyclapton.vercel.app${props.image}`
@@ -86,17 +88,12 @@ export async function getStaticProps({ params }) {
   }
 }
 
-export async function getStaticPaths() {
+export async function getStaticPaths({ locales }) {
   const posts = getAllPosts(['slug'])
 
+  // o artigo é o mesmo nos dois idiomas (escrito em português); muda só o que está em volta
   return {
-    paths: posts.map(post => {
-      return {
-        params: {
-          slug: post.slug,
-        },
-      }
-    }),
+    paths: posts.flatMap(post => locales.map(locale => ({ params: { slug: post.slug }, locale }))),
     fallback: 'blocking',
   }
 }
