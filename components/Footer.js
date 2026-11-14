@@ -8,11 +8,6 @@ export default function Footer() {
       url: '/contact',
       icon: 'ri-mail-line',
     },
-    // {
-    //   title: 'Twitter',
-    //   url: 'https://twitter.com/zenorocha',
-    //   icon: 'ri-twitter-line',
-    // },
     {
       title: 'GitHub',
       url: 'https://github.com/joeyclapton',
@@ -38,7 +33,7 @@ export default function Footer() {
       </Anchor>
     }
 
-    return <Link key={index} href={link.url} passHref>
+    return <Link key={index} href={link.url} passHref legacyBehavior>
       <Anchor>
         <Title>{link.title}</Title>
         <Icon className={link.icon} />
