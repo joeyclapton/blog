@@ -5,11 +5,14 @@ import stripHtml from '../lib/strip-html'
 import Toast from '../components/Toast'
 import { Box } from '../components/Box'
 import { styled } from '../stitches.config'
+import { pick, siteUrl } from '../lib/i18n'
 
-export async function getStaticProps() {
+export async function getStaticProps({ locale }) {
   const meta = {
-    title: 'Contact // Joey Clapton',
-    tagline: 'Manda um e-mail. Como antigamente.',
+    locale,
+    title: pick(locale, { en: 'Contact // Joey Clapton', pt: 'Contato // Joey Clapton' }),
+    tagline: pick(locale, { en: 'Send an email. Like the old days.', pt: 'Manda um e-mail. Como antigamente.' }),
+    url: siteUrl(locale, '/contact'),
     image: '/static/images/reminder-bw.jpg',
     primaryColor: 'cyan',
     secondaryColor: 'green',
@@ -19,8 +22,12 @@ export async function getStaticProps() {
 }
 
 function Contact(props) {
-  const { title, image } = props
-  const description = `<strong>Adoro conversar</strong> com quem constrói produto: devs, designers, fundadores e estudantes. Pode ser sobre um projeto, uma vaga ou só pra trocar ideia. <strong>Respondo assim que der.</strong>`
+  const { title, image, url, locale } = props
+  const t = text => pick(locale, text)
+  const description = t({
+    en: `<strong>I love talking</strong> with people who build products: developers, designers, founders and students. It can be about a project, a job or just to exchange ideas. <strong>I'll reply as soon as I can.</strong>`,
+    pt: `<strong>Adoro conversar</strong> com quem constrói produto: devs, designers, fundadores e estudantes. Pode ser sobre um projeto, uma vaga ou só pra trocar ideia. <strong>Respondo assim que der.</strong>`,
+  })
   const [isEmailSent, setIsEmailSent] = React.useState(undefined)
   const [showToast, setShowToast] = React.useState(false)
 
@@ -56,34 +63,36 @@ function Contact(props) {
         <meta content={title} property="og:title" />
         <meta content={stripHtml(description)} name="description" />
         <meta content={stripHtml(description)} property="og:description" />
-        <meta content="https://joeyclapton.vercel.app/contact" property="og:url" />
+        <meta content={url} property="og:url" />
         <meta content={`https://joeyclapton.vercel.app${image}`} property="og:image" />
       </Head>
 
       <Box>
         <p dangerouslySetInnerHTML={{ __html: description }} />
-        <h2>Mandar e-mail</h2>
+        <h2>{t({ en: 'Send an email', pt: 'Mandar e-mail' })}</h2>
         <Form onSubmit={onSendEmail}>
           <FormGroup>
-            <Label htmlFor="name">Nome</Label>
-            <Input id="name" type="text" placeholder="Seu nome" required />
+            <Label htmlFor="name">{t({ en: 'Name', pt: 'Nome' })}</Label>
+            <Input id="name" type="text" placeholder={t({ en: 'Your name', pt: 'Seu nome' })} required />
           </FormGroup>
           <FormGroup>
-            <Label htmlFor="email">E-mail</Label>
-            <Input id="email" type="email" placeholder="voce@email.com" required />
+            <Label htmlFor="email">{t({ en: 'Email', pt: 'E-mail' })}</Label>
+            <Input id="email" type="email" placeholder={t({ en: 'you@email.com', pt: 'voce@email.com' })} required />
           </FormGroup>
           <FormGroup>
-            <Label htmlFor="message">Mensagem</Label>
-            <Textarea id="message" placeholder="Como posso ajudar?" rows="4" required />
+            <Label htmlFor="message">{t({ en: 'Message', pt: 'Mensagem' })}</Label>
+            <Textarea id="message" placeholder={t({ en: 'How can I help?', pt: 'Como posso ajudar?' })} rows="4" required />
           </FormGroup>
           <FormGroup>
-            <Button type="submit">Enviar</Button>
+            <Button type="submit">{t({ en: 'Send', pt: 'Enviar' })}</Button>
           </FormGroup>
         </Form>
 
         <Toast
-          title={isEmailSent ? 'Email sent :D' : 'Error :('}
-          description={isEmailSent ? 'Valeu pela mensagem, respondo em breve.' : 'Algo deu errado. Tenta de novo mais tarde.'}
+          title={isEmailSent ? t({ en: 'Email sent :D', pt: 'E-mail enviado :D' }) : t({ en: 'Error :(', pt: 'Erro :(' })}
+          description={isEmailSent
+            ? t({ en: 'Thanks for your message, I will reply soon.', pt: 'Valeu pela mensagem, respondo em breve.' })
+            : t({ en: 'Something went wrong. Please try again later.', pt: 'Algo deu errado. Tenta de novo mais tarde.' })}
           isSuccess={isEmailSent}
           showToast={showToast}
           setShowToast={setShowToast}
