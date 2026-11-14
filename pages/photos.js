@@ -2,7 +2,6 @@ import React from 'react'
 import Base from '../layouts/Base'
 import Head from 'next/head'
 import stripHtml from '../lib/strip-html'
-import { AnimateSharedLayout } from 'framer-motion'
 import { styled } from '../stitches.config'
 import { getAllPhotos } from '../lib/blog'
 
@@ -25,7 +24,6 @@ const Photos = (props) => {
   const { title, image, photos } = props
   const description = `O homem inventa processos de registro para não ser refém do esquecimento. É a memória que nos orienta no tempo, informa-nos sobre quem somos, de onde viemos e nos dá identidade...
   </br> É a fotografia que segura relógios, retorna calendários, faz do passado presente, num instante.`
-  console.log(photos)
   return (
     <section>
       <Head>
@@ -33,23 +31,21 @@ const Photos = (props) => {
         <meta content={title} property="og:title" />
         <meta content={stripHtml(description)} name="description" />
         <meta content={stripHtml(description)} property="og:description" />
-        <meta content="https://https://joeyclapton.vercel.app/articles" property="og:url" />
-        <meta content={`https://https://joeyclapton.vercel.app${image}`} property="og:image" />
+        <meta content="https://joeyclapton.vercel.app/articles" property="og:url" />
+        <meta content={`https://joeyclapton.vercel.app${image}`} property="og:image" />
       </Head>
-      <AnimateSharedLayout>
-        <p dangerouslySetInnerHTML={{ __html: description }} />
+      <p dangerouslySetInnerHTML={{ __html: description }} />
 
-        <h2>My Photos</h2>
-        <Container>
-          {
-            photos.map((url, idx) => (
-              <Figure key={url}>
-                <Img src={`/static/images/album/${url}`} alt="A windmill" />
-              </Figure>
-            ))
-          }
-        </Container>
-      </AnimateSharedLayout>
+      <h2>My Photos</h2>
+      <Container>
+        {
+          photos.map((url, idx) => (
+            <Figure key={url}>
+              <Img src={`/static/images/album/${url}`} alt="A windmill" />
+            </Figure>
+          ))
+        }
+      </Container>
     </section>
   )
 }
