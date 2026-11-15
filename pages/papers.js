@@ -48,6 +48,13 @@ function Papers(props) {
             </Meta>
             <Title>{paper.title}</Title>
             <Venue>{typeof paper.venue === 'string' ? paper.venue : pick(locale, paper.venue)}</Venue>
+            {paper.highlights && (
+              <Highlights>
+                {paper.highlights.map(h => (
+                  <li key={h.en}><span aria-hidden="true">{h.icon}</span>{pick(locale, h)}</li>
+                ))}
+              </Highlights>
+            )}
             <Authors>
               {paper.authors.map((name, i) => (
                 <span key={name}>
@@ -124,6 +131,26 @@ const Badge = styled('span', {
 const Title = styled('h3', { margin: '8px 0 4px', lineHeight: 1.3 })
 
 const Venue = styled('p', { margin: 0, fontStyle: 'italic', color: '$secondary', fontSize: 15 })
+
+const Highlights = styled('ul', {
+  listStyle: 'none',
+  padding: 0,
+  margin: '12px 0 4px',
+  display: 'flex',
+  flexWrap: 'wrap',
+  gap: 8,
+  '& li': {
+    display: 'flex',
+    alignItems: 'center',
+    gap: 8,
+    fontSize: 13,
+    color: '$orange',
+    background: 'rgba(255, 202, 128, 0.06)',
+    border: '1px solid rgba(255, 202, 128, 0.25)',
+    borderRadius: '$borderRadius',
+    padding: '4px 10px',
+  },
+})
 
 const Authors = styled('p', {
   margin: '8px 0',

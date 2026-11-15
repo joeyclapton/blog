@@ -19,6 +19,10 @@ const items = [
     type: { en: 'Conference', pt: 'Conferência' },
     venue: 'Simpósio Brasileiro de Qualidade de Software (SBQS 2025)',
     year: 2025,
+    highlights: [
+      { icon: '🏆', en: 'Distinguished Paper Award', pt: 'Prêmio Distinguished Paper' },
+      { icon: '🌎', en: 'Selected for the Brazilian Software Engineering Showcase at ICSE 2026, Rio de Janeiro', pt: 'Selecionado para o Brazilian Software Engineering Showcase no ICSE 2026, Rio de Janeiro' },
+    ],
     authors: ['Joey Clapton', 'Hugo Bastos', 'João Pedro Oliveira Batisteli', 'Danilo Boechat Seufitelli', 'Cleiton Tavares'],
     summary: {
       en: 'Compares CSR and SSR in photo-gallery web apps across five data sizes using Core Web Vitals. SSR did better on TTI and LCP; CSR did better on FCP and Speed Index for smaller datasets.',
