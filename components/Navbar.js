@@ -15,6 +15,7 @@ export default function Navbar() {
     ['about', { en: 'About', pt: 'Sobre' }],
     ['projects', { en: 'Projects', pt: 'Projetos' }],
     ['articles', { en: 'Articles', pt: 'Artigos' }],
+    ['papers', { en: 'Papers', pt: 'Publicações' }],
     ['photos', { en: 'Photos', pt: 'Fotos' }],
     ['reminder', { en: 'Reminder', pt: 'Lembrete' }],
   ]
