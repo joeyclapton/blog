@@ -33,6 +33,7 @@ export default function CommandBar(props) {
   const aboutRef = useRef()
   const articlesRef = useRef()
   const projectsRef = useRef()
+  const papersRef = useRef()
   const photosRef = useRef()
   const reminderRef = useRef()
   const router = useRouter()
@@ -110,6 +111,15 @@ export default function CommandBar(props) {
       section: t({ en: 'Go To', pt: 'Ir para' }),
       perform: () => router.push('/projects'),
       icon: <Lottie lottieRef={projectsRef} style={iconSize} animationData={projectsIcon} loop={false} autoplay={false} />,
+    },
+    {
+      id: 'papers',
+      name: t({ en: 'Papers', pt: 'Publicações' }),
+      shortcut: ['g', 'c'],
+      keywords: 'go-papers research publications',
+      section: t({ en: 'Go To', pt: 'Ir para' }),
+      perform: () => router.push('/papers'),
+      icon: <Lottie lottieRef={papersRef} style={iconSize} animationData={articlesIcon} loop={false} autoplay={false} />,
     },
     {
       id: 'photos',
